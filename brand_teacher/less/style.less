@@ -1,0 +1,161 @@
+// out: "../css/style.css", compress: false, sourceMap: true
+
+/* colors */
+@btn-color: #6d09e7;
+@icons-color: #6d09e7;
+@title-color: #e5e5e5;
+@text-color: #000;
+@block-color: #686868;
+@light-color: #fff;
+
+/* fonts */
+@second-title-font: "Ledger", sans-serif;
+@main-font: "Montserrat", sans-serif;
+@title-font: "Uni Sans", sans-serif;
+@font-face {
+    font-family: "Ledger";
+    font-weight: 400;
+    font-style: normal;
+    src: local("Ledger Regular"),
+        local("Ledger-Regular"),
+        url("../fonts/Ledger-Regular.woff2") format('woff2'),
+        url("../fonts/Ledger-Regular.woff") format('woff'),
+        url("../fonts/Ledger-Regular.eot") format('eot');
+    font-display: swap;
+}
+@font-face {
+    font-family: "Uni Sans";
+    font-weight: 100;
+    font-style: normal;
+    src: local("Uni Sans CAPS"),
+        local("Uni Sans Caps"),
+        local("Uni Sans ThinCaps"),
+        url("../fonts/UniSansThinCAPS.woff2") format('woff2'),
+        url("../fonts/UniSansThinCAPS.woff") format('woff'),
+        url("../fonts/UniSansThinCAPS.eot") format('eot');
+    font-display: swap;
+}
+@font-face {
+    font-family: "Ledger";
+    font-weight: 400;
+    font-style: normal;
+    src: local("Ledger Regular"),
+        local("Ledger-Regular"),
+        url("../fonts/Ledger-Regular.woff2") format('woff2'),
+        url("../fonts/Ledger-Regular.woff") format('woff'),
+        url("../fonts/Ledger-Regular.eot") format('eot');
+    font-display: swap;
+}
+
+/* basic elements */
+body {
+    background-color: @block-color;
+    color: @light-color;
+    font-size: 14px;
+    font-family: @main-font;
+    font-weight: 500;
+}
+
+/* header */
+.header {
+    padding-top: 35px;
+    &__list {
+        margin-bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+    }
+}
+
+/* intro */
+.intro {
+    display: flex;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    z-index: -100;
+    &__image {
+        background-image: url(https://www.dummyimage.com/645x521/bfbfbf/fff.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100%;
+    }
+    &__title {
+        span {
+            font-size: 48px;
+        }
+        font-size: 36px;
+        font-family: @title-font;
+        margin-bottom: 0.7em;
+    }
+    &__biography--block {
+        display: grid;
+        align-content: center;
+    }
+    &__biography--text {
+        margin-bottom: 5em;
+    }
+    &__arrow {
+        justify-self: center;
+    }
+}
+
+/* cube */
+.section {
+    position: relative;
+}
+.cube {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    bottom:  calc(0% + 300px);
+    right: calc(0% + 300px / 2);
+    z-index: -1000;
+    transform-style: preserve-3d;
+    transform: perspective(700px)  rotateX(-36deg) rotateY(-27deg);
+    transition: all 1s ease;
+
+    & > article {
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        position: absolute;
+        transform-style: preserve-3d;
+        background: linear-gradient(0deg, @btn-color, #7b1f84);
+        color: #fff;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        border-radius: 25px;
+        box-shadow:
+            0 0 1px #f00,
+            0 0 1px #f00,
+            0 0 1px #f00,
+            0 0 1px #f00,
+            0 0 10px #d0e9 inset,
+            0 0 35px #53d5;
+
+            & p {
+                font-weight: 200;
+                font-size: 30px;
+                text-transform: uppercase;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    }
+    animation: rotation 45s ease-in-out infinite;
+}
+
+.back   {transform: rotateY(-180deg) translateZ(150px);}
+.top    {transform: rotateX( 90deg)  translateZ(150px);}
+.front  {transform:                  translateZ(150px);}
+.bottom {transform: rotateX(-90deg)  translateZ(150px);}
+.left   {transform: rotateY(-90deg)  translateZ(150px);}
+.right  {transform: rotateY( 90deg)  translateZ(150px);}
+
+@keyframes rotation {
+    50% {transform:perspective(700px) rotateX(360deg) rotateY(720deg);}
+}
