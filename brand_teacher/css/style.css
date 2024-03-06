@@ -23,14 +23,49 @@
 }
 /* basic elements */
 body {
-  background-color: #686868;
-  color: #fff;
+  background-color: #232323;
+  color: #000;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
+main {
+  position: relative;
+  top: 100vh;
+}
+h2,
+h3 {
+  font-family: "Ledger", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  text-align: center;
+}
+h3 {
+  font-size: 16px;
+  letter-spacing: 0.03em;
+}
+.btn {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  background-color: #9747FF;
+  border-radius: 15px;
+  border: none;
+  padding: 20px 30px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.09em;
+}
 /* header */
 .header {
+  color: #fff;
   padding-top: 35px;
 }
 .header__list {
@@ -46,6 +81,7 @@ body {
   position: fixed;
   top: 0px;
   z-index: -100;
+  color: #fff;
 }
 .intro__image {
   background-image: url(https://www.dummyimage.com/645x521/bfbfbf/fff.jpg);
@@ -72,66 +108,49 @@ body {
 .intro__arrow {
   justify-self: center;
 }
-/* cube */
-.section {
-  position: relative;
+/* about me */
+.about-me {
+  background-color: #E4E5E7;
+  padding: 85px 0;
 }
-.cube {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  bottom: calc(0% + 300px);
-  right: calc(0% + 300px / 2);
-  z-index: -1000;
-  transform-style: preserve-3d;
-  transform: perspective(700px) rotateX(-36deg) rotateY(-27deg);
-  transition: all 1s ease;
-  animation: rotation 45s ease-in-out infinite;
+.about-me__title {
+  padding-bottom: 35px;
+  border-bottom: 1px solid #616161;
 }
-.cube > article {
-  height: 100%;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  position: absolute;
-  transform-style: preserve-3d;
-  background: linear-gradient(0deg, #6d09e7, #7b1f84);
-  color: #fff;
-  line-height: 150%;
-  letter-spacing: 0.05em;
-  border-radius: 25px;
-  box-shadow: 0 0 1px #f00, 0 0 1px #f00, 0 0 1px #f00, 0 0 1px #f00, 0 0 10px #d0e9 inset, 0 0 35px #53d5;
+.about-me__items {
+  margin-top: 80px;
+  margin-bottom: 85px;
 }
-.cube > article p {
-  font-weight: 200;
-  font-size: 30px;
-  text-transform: uppercase;
-  height: 100%;
+.about-me__card {
+  border-radius: 13px;
+  border: none;
+  box-shadow: 0 4px 20px 0 #b6b6b6;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
 }
-.back {
-  transform: rotateY(-180deg) translateZ(150px);
+.about-me__card-body {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
-.top {
-  transform: rotateX(90deg) translateZ(150px);
+.about-me__card-title {
+  margin-bottom: 1.4em;
 }
-.front {
-  transform: translateZ(150px);
+.about-me__card-text {
+  font-family: "Ledger", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
 }
-.bottom {
-  transform: rotateX(-90deg) translateZ(150px);
-}
-.left {
-  transform: rotateY(-90deg) translateZ(150px);
-}
-.right {
-  transform: rotateY(90deg) translateZ(150px);
-}
-@keyframes rotation {
-  50% {
-    transform: perspective(700px) rotateX(360deg) rotateY(720deg);
-  }
+.about-me__btn {
+  text-align: center;
 }
 /*# sourceMappingURL=./style.css.map */
