@@ -50,12 +50,15 @@
 }
 
 /* basic elements */
-body {
+body, a {
     background-color: @block-color;
     color: @text-dark-color;
     font-size: 14px;
     font-family: @main-font;
     font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.09em;
+    line-height: 120%;
 }
 main {
     position: relative;
@@ -73,6 +76,10 @@ h2, h3 {
 h3 {
     font-size: 16px;
     letter-spacing: 0.03em;
+}
+ul, ol {
+    padding: 0;
+    margin: 0;
 }
 .btn {
     display: inline-block;
@@ -178,8 +185,92 @@ h3 {
             font-weight: 400;
             font-size: 40px;
         }
+        &--textbox {
+            display: flex;
+            .about-me__card {
+                padding-bottom: 0;
+                &-fulltext {
+                    border: none;
+                    margin: 0;
+                }
+            }
+        }
     }
     &__btn {
         text-align: center;
+    }
+}
+
+/* competence */
+.competence__slider {
+    position: relative;
+    overflow: hidden;
+    background-color: @light-color;
+    padding: 85px 0 35px;
+    &--box {
+        margin: 0 -100% 0 0;
+        position: relative;
+        &::before {
+            content: "";
+            height: 150px;
+        }
+    }
+    &--item {
+        padding: 20px 30px;
+        background-color: @block-color;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        border-radius: 25px;
+        & a {
+            color: @text-light-color;
+        }
+    }
+    .slick-current&--item {
+        padding: 55px 65px;
+
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    &--img {
+        display: none;
+        height: 50%;
+    }
+    .slick-current &--img {
+        display: none;
+    }
+    &--title {
+        text-align: left;
+    }
+    &--preview {
+        margin-top: 100px;
+    }
+    .slick-current &--preview {
+        margin-top: 198px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+    .slick-track {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        column-gap: 10em;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1050px));
+    }
+    .slick-list {
+        overflow: hidden;
+    }
+
+    &--arrow {
+        &-box {
+            padding-top: 50px;
+            display: flex;
+            justify-content: end;
+        }
+        &-prev svg{
+            rotate: 180deg;
+            margin-right: 4em;
+        }
     }
 }

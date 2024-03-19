@@ -22,12 +22,16 @@
   font-display: swap;
 }
 /* basic elements */
-body {
+body,
+a {
   background-color: #232323;
   color: #000;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.09em;
+  line-height: 120%;
 }
 main {
   position: relative;
@@ -46,6 +50,11 @@ h3 {
 h3 {
   font-size: 16px;
   letter-spacing: 0.03em;
+}
+ul,
+ol {
+  padding: 0;
+  margin: 0;
 }
 .btn {
   display: inline-block;
@@ -150,7 +159,86 @@ h3 {
   font-weight: 400;
   font-size: 40px;
 }
+.about-me__card--textbox {
+  display: flex;
+}
+.about-me__card--textbox .about-me__card {
+  padding-bottom: 0;
+}
+.about-me__card--textbox .about-me__card-fulltext {
+  border: none;
+  margin: 0;
+}
 .about-me__btn {
   text-align: center;
+}
+/* competence */
+.competence__slider {
+  position: relative;
+  overflow: hidden;
+  background-color: #E4E5E7;
+  padding: 85px 0 35px;
+}
+.competence__slider--box {
+  margin: 0 -100% 0 0;
+  position: relative;
+}
+.competence__slider--box::before {
+  content: "";
+  height: 150px;
+}
+.competence__slider--item {
+  padding: 20px 30px;
+  background-color: #232323;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}
+.competence__slider--item a {
+  color: #fff;
+}
+.slick-current.competence__slider--item {
+  padding: 55px 65px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.competence__slider--img {
+  display: none;
+  height: 50%;
+}
+.slick-current .competence__slider--img {
+  display: none;
+}
+.competence__slider--title {
+  text-align: left;
+}
+.competence__slider--preview {
+  margin-top: 100px;
+}
+.slick-current .competence__slider--preview {
+  margin-top: 198px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.competence__slider .slick-track {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  column-gap: 10em;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1050px));
+}
+.competence__slider .slick-list {
+  overflow: hidden;
+}
+.competence__slider--arrow-box {
+  padding-top: 50px;
+  display: flex;
+  justify-content: end;
+}
+.competence__slider--arrow-prev svg {
+  rotate: 180deg;
+  margin-right: 4em;
 }
 /*# sourceMappingURL=./style.css.map */
