@@ -9,6 +9,7 @@
 @light-color: #E4E5E7;
 @lines-color: #616161;
 @shadow-color: #b6b6b6;
+@block-sq-color: #ececec;
 
 /* fonts */
 @second-title-font: "Ledger", sans-serif;
@@ -77,7 +78,7 @@ h3 {
     font-size: 16px;
     letter-spacing: 0.03em;
 }
-ul, ol {
+ul, ol, p {
     padding: 0;
     margin: 0;
 }
@@ -158,6 +159,7 @@ ul, ol {
         margin-bottom: 85px;
     }
     &__card {
+        background-color: @block-sq-color;
         border-radius: 13px;
         border: none;
         box-shadow: 0 4px 20px 0 @shadow-color;
@@ -216,7 +218,9 @@ ul, ol {
         }
     }
     &--item {
-        padding: 20px 30px;
+        padding: 55px 65px;
+        position: relative;
+
         background-color: @block-color;
         -webkit-border-radius: 25px;
         -moz-border-radius: 25px;
@@ -225,37 +229,44 @@ ul, ol {
             color: @text-light-color;
         }
     }
-    .slick-current&--item {
-        padding: 55px 65px;
-
-        -webkit-transition: all .3s ease;
-        -moz-transition: all .3s ease;
-        -o-transition: all .3s ease;
-        transition: all .3s ease;
-    }
-    &--img {
-        display: none;
-        height: 50%;
-    }
-    .slick-current &--img {
-        display: none;
+    .lorem_sq {
+        width: 200px;
+        height: 200px;
+        background-color: @text-light-color;
+        border-radius: 25px;
+        position: absolute;
+        margin-top: 10.5%;
+        top: 0;
+        right: -9.5%;
+        left: auto;
     }
     &--title {
         text-align: left;
     }
     &--preview {
         margin-top: 100px;
+
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
     }
     .slick-current &--preview {
         margin-top: 198px;
         font-size: 16px;
         font-weight: 300;
+
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+
     }
     .slick-track {
         display: grid;
         grid-auto-flow: column;
         align-items: center;
-        column-gap: 10em;
+        column-gap: 14em;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1050px));
     }
     .slick-list {
@@ -273,4 +284,80 @@ ul, ol {
             margin-right: 4em;
         }
     }
+}
+
+/* perfomance */
+.perfomance {
+    background-color: @block-color;
+    padding: 85px 0;
+}
+
+/* problems */
+.problems {
+    background-color: @light-color;
+    padding: 85px 0;
+    &__list {
+        padding-top: 55px;
+    }
+    &__item {
+        border-radius: 13px;
+        border: none;
+        box-shadow: 0 4px 20px 0 @shadow-color;
+        padding: 35px;
+        background-color: @block-sq-color;
+
+        &--title {
+            margin-top: 170px;
+            text-align: left;
+        }
+        &--text {
+            font-size: 16px;
+            font-weight: 300;
+            display: none;
+        }
+
+        &:hover {
+            background-color: @block-color;
+            & .problems__item--text, & .problems__item--title {
+                color: @text-light-color;
+                display: block;
+            }
+        }
+    }
+}
+
+/* results */
+.results {
+    background-color: @light-color;
+    padding: 85px 0;
+}
+
+/* reviews */
+.reviews {
+    background-color: @light-color;
+    padding: 85px 0;
+}
+
+/* faq */
+.faq {
+    background-color: @block-color;
+    padding: 85px 0;
+}
+
+/* planner */
+.planner {
+    background-color: @light-color;
+    padding: 85px 0;
+}
+
+/* form-connect */
+.form-connect {
+    background-color: @block-color;
+    padding: 85px 0;
+}
+
+/* contacts */
+.contacts {
+    background-color: @block-color;
+    padding: 85px 0;
 }
