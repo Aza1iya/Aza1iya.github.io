@@ -181,6 +181,9 @@ p {
   background-color: #E4E5E7;
   padding: 85px 0 35px;
 }
+.competence__slider--block {
+  height: 500px;
+}
 .competence__slider--box {
   margin: 0 -100% 0 0;
   position: relative;
