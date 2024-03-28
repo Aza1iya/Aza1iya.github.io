@@ -61,40 +61,40 @@
           <div class="about-me__block row">
             <h2 class="about-me__title col-lg-6 offset-lg-3">обо мне</h2>
           </div>
-          <div class="about-me__items row gx-lg-5">
-            <div class="col-lg-3">
+          <div class="about-me__list row gx-lg-5">
+            <div class="col-lg-3 about-me__item" id="first_box_count">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
                   <h3 class="about-me__card-title card-title">стаж работы</h3>
-                  <p class="about-me__card-text card-text">07</p>
+                  <p class="about-me__card-text card-text" data-target="07">0</p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 about-me__item" id="second_box_count">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
-                  <h3 class="about-me__card-title card-title">стаж работы</h3>
-                  <p class="about-me__card-text card-text">07</p>
+                  <h3 class="about-me__card-title card-title">Далеко-далеко, за.</h3>
+                  <p class="about-me__card-text card-text" data-target="123">0</p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 about-me__item" id="third_box_count">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
-                  <h3 class="about-me__card-title card-title">стаж работы</h3>
-                  <p class="about-me__card-text card-text">07</p>
+                  <h3 class="about-me__card-title card-title">Далеко-далеко, за.</h3>
+                  <p class="about-me__card-text card-text" data-target="417">0</p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 about-me__item" id="fourth_box_count">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
-                  <h3 class="about-me__card-title card-title">стаж работы</h3>
-                  <p class="about-me__card-text card-text">07</p>
+                  <h3 class="about-me__card-title card-title">Далеко-далеко, за.</h3>
+                  <p class="about-me__card-text card-text" data-target="91">0</p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-9 about-me__card--textbox" style="display: none">
+            <div class="col-lg-9 about-me__card--textbox" id="first_box_info">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
                   <p class="about-me__card-fulltext card">
@@ -109,7 +109,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-9 about-me__card--textbox" style="display: none">
+            <div class="col-lg-9 about-me__card--textbox" id="second_box_info">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
                   <p class="about-me__card-fulltext card">
@@ -124,7 +124,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-9 about-me__card--textbox" style="display: none">
+            <div class="col-lg-9 about-me__card--textbox" id="third_box_info">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
                   <p class="about-me__card-fulltext card">
@@ -139,7 +139,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-9 about-me__card--textbox" style="display: none">
+            <div class="col-lg-9 about-me__card--textbox" id="fourth_box_info">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
                   <p class="about-me__card-fulltext card">
@@ -369,59 +369,158 @@
           </div>
           <ul class="problems__list row g-5">
             <li class="col-lg-6">
-              <div class="problems__item card">
-                <div class="problems__descr card-body">
+              <div class="problems__item first card">
+                <div class="problems__item--info card-body">
                   <h3 class="problems__item--title card-title">название проблемы 111</h3>
                   <p class="problems__item--text card-text">
                     Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Рекламных вдали свою меня силуэт власти, рыбного взобравшись семь толку курсивных раз маленький, прямо путь города, вершину имеет! Жаренные, ее.
                   </p>
-                </div>                
+                </div>      
+                <figure class="problems__item--icon">
+                  <div class="lorem_sq"></div>
+                </figure>          
               </div>
-
-              <div class="problems__item--icon"></div>
             </li>
             <li class="col-lg-6">
-              <div class="problems__item card">
-                <div class="problems__descr card-body">
+              <div class="problems__item second card">
+                <div class="problems__item--info card-body">
                   <h3 class="problems__item--title card-title">название проблемы 111</h3>
                   <p class="problems__item--text card-text">
                     Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Рекламных вдали свою меня силуэт власти, рыбного взобравшись семь толку курсивных раз маленький, прямо путь города, вершину имеет! Жаренные, ее.
                   </p>
-                </div>                
+                </div>      
+                <figure class="problems__item--icon">
+                  <div class="lorem_sq"></div>
+                </figure>          
               </div>
-
-              <div class="problems__item--icon"></div>
             </li>
             <li class="col-lg-6">
-              <div class="problems__item card">
-                <div class="problems__descr card-body">
+              <div class="problems__item second card">
+                <div class="problems__item--info card-body">
                   <h3 class="problems__item--title card-title">название проблемы 111</h3>
                   <p class="problems__item--text card-text">
                     Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Рекламных вдали свою меня силуэт власти, рыбного взобравшись семь толку курсивных раз маленький, прямо путь города, вершину имеет! Жаренные, ее.
                   </p>
-                </div>                
+                </div>      
+                <figure class="problems__item--icon">
+                  <div class="lorem_sq"></div>
+                </figure>          
               </div>
-
-              <div class="problems__item--icon"></div>
             </li>
             <li class="col-lg-6">
-              <div class="problems__item card">
-                <div class="problems__descr card-body">
+              <div class="problems__item first card">
+                <div class="problems__item--info card-body">
                   <h3 class="problems__item--title card-title">название проблемы 111</h3>
                   <p class="problems__item--text card-text">
                     Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Рекламных вдали свою меня силуэт власти, рыбного взобравшись семь толку курсивных раз маленький, прямо путь города, вершину имеет! Жаренные, ее.
                   </p>
-                </div>                
+                </div>      
+                <figure class="problems__item--icon">
+                  <div class="lorem_sq"></div>
+                </figure>          
               </div>
-
-              <div class="problems__item--icon"></div>
             </li>
           </ul>
         </div>
       </section>
       <section class="results">
         <div class="container">
-          
+          <div class="results__box row">
+            <h2 class="results__box--title col-lg-4">что вы получите в&nbsp;результате</h2>
+            <div class="results__box--square col-lg-2">
+              <h4 class="results__box--title">шаг<span>01</span></h4>
+            </div>
+            <div class="results__box--info col-lg-5 offset-lg-1" id="first_circle_trigger">
+              <h3 class="results__box--info-title">название  первого</h3>
+              <ul class="results__box--info-list">
+                <li class="results__box--info-item">Далеко-далеко за словесными горами в стране гласных и согласных.</li>
+                <li class="results__box--info-item">Далеко-далеко за словесными горами в стране.</li>
+                <li class="results__box--info-item">Далеко-далеко за словесными горами.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="results__box first-line">
+            <div class="results__box--transition">
+              <svg width="517" height="223" viewBox="0 0 517 223" id="svg1">
+                <g id="circle1" filter="url(#filter_circle)">
+                <circle cx="15.5" cy="19.5" r="11.5" fill="url(#paint_circle)"/>
+                </g>
+                <path id="path1" d="M512.5 72.7771C481.6 107.468 374.739 193.263 245.015 99.7073C179.24 52.2705 61.3853 45.703 0.999971 150" stroke="black" stroke-width="1px" fill="none"/>
+                <defs>
+                <filter id="filter_circle" x="0" y="8" width="31" height="31" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" targetues="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_158_4"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_158_4" result="shape"/>
+                </filter>
+                <linearGradient id="paint_circle" x1="14.5" y1="3" x2="21" y2="20" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0E99FE"/>
+                <stop offset="1" stop-color="#9747FF"/>
+                </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <div class="results__box row">
+            <div class="results__box--info col-lg-5 offset-lg-1" id="second_circle_trigger">
+              <h3 class="results__box--info-title">название  второго</h3>
+              <ul class="results__box--info-list">
+                <li class="results__box--info-item">Далеко-далеко за словесными горами в стране гласных и согласных.</li>
+                <li class="results__box--info-item">Далеко-далеко за словесными горами в стране.</li>
+                <li class="results__box--info-item">Далеко-далеко за словесными горами.</li>
+              </ul>
+            </div>
+            <div class="results__box--square col-lg-2 offset-lg-3">
+              <h4 class="results__box--title">шаг<span>02</span></h4>
+            </div>
+          </div>
+
+          <div class="results__box second-line">
+            <div class="results__box--transition">
+              <svg width="736" height="197" viewBox="0 0 736 197" id="svg2">
+                <g id="circle2" filter="url(#filter_circle)">
+                <circle cx="15.5" cy="19.5" r="11.5" fill="url(#paint_circle)"/>
+                </g>
+                <path id="path2" d="M6 28.1413C46.5 114.141 233.153 119.729 354.5 41.6413C462.5 -27.8574 677.5 -27.1443 735.5 196.456" stroke="black" stroke-width="1px" fill="none"/>
+                <!-- <path id="path2" d="M6 100.141C46.5 186.141 233.153 191.729 354.5 113.641C462.5 44.1426 677.5 44.8557 735.5 268.456" stroke="black" stroke-width="1px" fill="none"/> -->
+                <defs>
+                <filter id="filter_circle" x="0" y="8" width="31" height="31" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_158_4"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_158_4" result="shape"/>
+                </filter>
+                <linearGradient id="paint_circle" x1="14.5" y1="3" x2="21" y2="20" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0E99FE"/>
+                <stop offset="1" stop-color="#9747FF"/>
+                </linearGradient>
+                </defs>
+                </svg>                
+            </div>  
+          </div>
+
+          <div class="results__box row">
+            <div class="results__box--square col-lg-2 offset-lg-1">
+              <h4 class="results__box--title">шаг<span>03</span></h4>
+            </div>
+            <div class="results__box--info col-lg-5 offset-lg-2">
+              <h3 class="results__box--info-title">название  третьего</h3>
+              <ul class="results__box--info-list">
+                <li class="results__box--info-item">Далеко-далеко за словесными горами в стране гласных и согласных.</li>
+                <li class="results__box--info-item">Далеко-далеко за словесными горами в стране.</li>
+                <li class="results__box--info-item">Далеко-далеко за словесными горами.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
       <section class="reviews">
@@ -453,8 +552,15 @@
       </section>
     </footer>
 
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js" integrity="sha512-lhK7xTsFM6DPXOtQQyPe+NmpoFEheKDHjM/5QzpFRiE1KySgtBfEzYz4XowvB+CAWcBLBGWinhh41uNaOtrSZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="./js/app_circle.js"></script>
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/slick.min.js"></script>
     <script type="text/javascript" src="./js/competence_slider.js"></script>
+    <script type="text/javascript" src="./js/counter_about_me.js"></script>
+    <script type="text/javascript" src="./js/animation_about-me.js"></script>
   </body>
 </html>
