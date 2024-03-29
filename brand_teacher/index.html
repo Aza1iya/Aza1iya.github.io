@@ -357,11 +357,11 @@
           </div>
         </div>
       </section>
-      <section class="perfomance">
+      <!-- <section class="perfomance">
         <div class="container">
           
         </div>
-      </section>
+      </section> -->
       <section class="problems">
         <div class="container">
           <div class="problems__block row">
@@ -523,7 +523,7 @@
           </div>
         </div>
       </section>
-      <section class="reviews">
+      <!-- <section class="reviews">
         <div class="container">
           
         </div>
@@ -537,30 +537,170 @@
         <div class="container">
           
         </div>
-      </section>
+      </section> -->
       <section class="form-connect">
         <div class="container">
-          
+          <div class="form-connect__title row">
+            <h2 class="form-connect__title-descr col-lg-4">
+              остались вопросы? напишите мне
+            </h2>
+          </div>
+          <div class="form-connect__wrapper">
+            <ul class="circles">
+              <li>
+                <svg width="850" height="844" viewBox="0 0 850 844" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_f_167_2)">
+                    <ellipse cx="425" cy="422" rx="125" ry="122" fill="#5B2B99" />
+                  </g>
+                  <defs>
+                    <filter id="filter0_f_167_2" x="0" y="0" width="850" height="844" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                      <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_167_2" />
+                    </filter>
+                  </defs>
+                </svg>
+              </li>
+              <li>
+                <svg width="850" height="844" viewBox="0 0 850 844" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_f_167_2)">
+                    <ellipse cx="425" cy="422" rx="125" ry="122" fill="#0E99FE" />
+                  </g>
+                  <defs>
+                    <filter id="filter0_f_167_2" x="0" y="0" width="850" height="844" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                      <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_167_2" />
+                    </filter>
+                  </defs>
+                </svg>
+              </li>
+              <li>
+                <svg width="850" height="844" viewBox="0 0 850 844" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_f_167_2)">
+                    <ellipse cx="425" cy="422" rx="125" ry="122" fill="#3462cb" />
+                  </g>
+                  <defs>
+                    <filter id="filter0_f_167_2" x="0" y="0" width="850" height="844" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                      <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_167_2" />
+                    </filter>
+                  </defs>
+                </svg>
+              </li>
+            </ul>
+            <form action="#">
+              <div class="form row">
+                <div class="form__block-left col-lg-5">
+                  <div class="form__box" id="form__box1">
+                    <input type="text" name="ФИО" placeholder="Введите ФИО" class="form__get-data">
+                  </div>
+                  <div class="form__box" id="form__box2">
+                    <input type="text" name="Телефон" placeholder="Номер телефона" class="form__get-data" id="phone-mask">
+                  </div>
+                  <div class="form__box" id="form__box3">
+                    <input type="text" name="Email" placeholder="Email" class="form__get-data">
+                  </div>
+                  <div class="form__box" id="form__box4">
+                    <select class="select" name="country">
+                      <option value="default" disabled>Выберите страну</option>
+                      <option value="Россия">Россия</option>
+                      <option value="Россия">Россия</option>
+                      <option value="Россия">Россия</option>
+                    </select>
+                  </div>
+                  <div class="form__box" id="form__box5">
+                    <select class="select" name="city">
+                      <option value="default" disabled>Выберите город</option>
+                      <option value="Казань">Казань</option>
+                      <option value="Казань">Казань</option>
+                      <option value="Казань">Казань</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form__block-right col-lg-6 offset-lg-1" id="form__box6">
+                  <div class="form__title-data">
+                    <p class="form__title">Опишите свой вопрос</p>
+                  </div>
+                  <div class="form__box">
+                    <div class="message__container">
+                      <textarea name="Сообщение" id="message__text" class="message__text"></textarea>
+                    </div>                    
+                  </div>
+                </div>
+                <div class="approval__form">
+                  <input type="checkbox" id="politics" onclick="check()" class="politics">
+                  <label class="approval">
+                    даю согласие на обработку персональных данных в соответсвии с <a target="_blank"
+                    href="#" class="link__approval">"Политикой конфиденциальности"</a>.
+                  </label>
+                </div>
+                <input type="submit" name="submit" class="btn submit col-lg-2" value="Отправить" disabled>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="container">
+          <div class="contacts__record row">
+            <div class="contacts__record--box col-lg-5 offset-lg-1">
+              <a href="#" class="contacts__record--link contacts__link">
+                записаться на консультацию
+              </a>
+              <div class="contacts__record--arrow contacts__arrow">
+                <svg width="51" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M50.7071 8.70711C51.0976 8.31659 51.0976 7.68342 50.7071 7.2929L44.3431 0.928936C43.9526 0.538412 43.3195 0.538412 42.9289 0.928936C42.5384 1.31946 42.5384 1.95263 42.9289 2.34315L48.5858 8L42.9289 13.6569C42.5384 14.0474 42.5384 14.6805 42.9289 15.0711C43.3195 15.4616 43.9526 15.4616 44.3431 15.0711L50.7071 8.70711ZM-8.74228e-08 9L50 9L50 7L8.74228e-08 7L-8.74228e-08 9Z" fill="white" />
+                </svg>
+              </div>              
+            </div>
+          </div>
+        </div>
+        <h2 class="contacts__title">
+          contacts
+        </h2>
+        <div class="container">
+          <div class="contacts__social row">
+            <div class="contacts__social--box col-lg-2 offset-lg-7">
+              <a href="#" class="contacts__social--link contacts__link">
+                telegram
+              </a>
+              <div class="contacts__social--arrow contacts__arrow">
+                <svg width="51" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M50.7071 8.70711C51.0976 8.31659 51.0976 7.68342 50.7071 7.2929L44.3431 0.928936C43.9526 0.538412 43.3195 0.538412 42.9289 0.928936C42.5384 1.31946 42.5384 1.95263 42.9289 2.34315L48.5858 8L42.9289 13.6569C42.5384 14.0474 42.5384 14.6805 42.9289 15.0711C43.3195 15.4616 43.9526 15.4616 44.3431 15.0711L50.7071 8.70711ZM-8.74228e-08 9L50 9L50 7L8.74228e-08 7L-8.74228e-08 9Z" fill="white" />
+                </svg>
+              </div>
+            </div>
+            <div class="contacts__social--box col-lg-2">
+              <a href="#" class="contacts__social--link contacts__link">
+                Whats App
+              </a>
+              <div class="contacts__social--arrow contacts__arrow">
+                <svg width="51" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M50.7071 8.70711C51.0976 8.31659 51.0976 7.68342 50.7071 7.2929L44.3431 0.928936C43.9526 0.538412 43.3195 0.538412 42.9289 0.928936C42.5384 1.31946 42.5384 1.95263 42.9289 2.34315L48.5858 8L42.9289 13.6569C42.5384 14.0474 42.5384 14.6805 42.9289 15.0711C43.3195 15.4616 43.9526 15.4616 44.3431 15.0711L50.7071 8.70711ZM-8.74228e-08 9L50 9L50 7L8.74228e-08 7L-8.74228e-08 9Z" fill="white" />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <section class="contacts">
-        <div class="container">
-          
-        </div>
-      </section>
-    </footer>
 
     <!-- scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js" integrity="sha512-lhK7xTsFM6DPXOtQQyPe+NmpoFEheKDHjM/5QzpFRiE1KySgtBfEzYz4XowvB+CAWcBLBGWinhh41uNaOtrSZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/imask"></script>
     <script type="text/javascript" src="./js/app_circle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/slick.min.js"></script>
     <script type="text/javascript" src="./js/competence_slider.js"></script>
     <script type="text/javascript" src="./js/counter_about_me.js"></script>
     <script type="text/javascript" src="./js/animation_about-me.js"></script>
+    <script type="text/javascript" src="./js/select_country_city.js"></script>
+    <script type="text/javascript" src="./js/phone-mask.js"></script>
+    <script type="text/javascript" src="./js/disabled_btn.js"></script>
   </body>
 </html>

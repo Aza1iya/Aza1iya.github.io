@@ -89,7 +89,7 @@ ul, ol, p, figure, h1, h2, h3, h4 {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    width: auto;
+    width: 18%;
     background-color: @btn-color;
     border-radius: 15px;
     border: none;
@@ -100,6 +100,11 @@ ul, ol, p, figure, h1, h2, h3, h4 {
     font-weight: 500;
     line-height: 120%;
     letter-spacing: 0.09em;
+    &:hover {
+        background-color: @btn-color;
+        opacity: 0.5;
+        color: @text-dark-color;
+    }
 }
 
 /* header */
@@ -513,10 +518,302 @@ ul, ol, p, figure, h1, h2, h3, h4 {
 .form-connect {
     background-color: @block-color;
     padding: 85px 0;
+    color: @text-light-color;
+    &__title-descr {
+        text-align: left;
+    }
+    &__wrapper {
+        position: relative;
+    }
+    .form {
+        &__block-left {
+            padding-top: 70px;
+        }
+        &__box {
+            padding-top: 30px;
+        }
+
+        // select
+        .select {
+            position: relative;
+        }
+        
+        .new-select {
+            position: relative;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            padding-right: 15px;
+            .arrow {
+                width: 15px;
+                height: 15px;
+                background-image: url(../img/svg/arrow_form_list.svg);
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            &__list {
+                position: absolute;
+                top: 28px;
+                left: 0;
+                background-color: @block-color;
+                border: 1px solid @lines-color;
+                width: 100%;
+                cursor: pointer;
+                z-index: 2;
+                user-select: none;
+                &.on {
+                    display: block;
+                }
+            }
+            &__item {
+                span {
+                    display: block;
+                    padding-top: 15px;
+                    padding-left: 15px;
+                    &:hover {
+                        background-color: @lines-color;
+                    }
+                }
+                &:last-child span {
+                    padding-bottom: 15px;
+                }
+            }
+        }
+
+        &__get-data, &__control, .select {
+            width: 100%;
+            height: 30px;
+            border: 0;
+            border-bottom: 1px solid @lines-color;
+            font-size: 16px;
+            font-weight: 300;
+            background-color: inherit;
+            padding-left: 15px;
+            color: @text-light-color;
+            option {
+                background-color: @block-color;
+            }
+        }
+        &__control {
+            padding-left: 12px;
+        }
+        ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color:    @text-light-color;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:    @text-light-color;
+            opacity:  1;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:    @text-light-color;
+            opacity:  1;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color:    @text-light-color;
+        }
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color:    @text-light-color;
+        }
+        ::placeholder { /* Most modern browsers support this now. */
+            color:    @text-light-color;
+        }
+        &__title {
+            font-size: 16px;
+            font-weight: 300;
+        }  
+        &__block-right .form__box {    
+            height: 95%;
+            .message__container {
+                height: 100%;
+                textarea {
+                    height: 100%;
+                    width: 100%;
+                    border: 1px solid @lines-color;
+                    border-radius: 25px;
+                    background: rgba(97, 97, 97, 0.2);
+                    backdrop-filter: blur(20px);
+                    resize: none;
+                    font-weight: 200;
+                    font-size: 16px;
+                    color: @text-light-color;
+                    padding: 40px;
+                }
+            }
+        }
+        .approval__form {
+            padding-top: 85px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+            label {
+                padding-left: 15px;
+            }
+            a {
+                text-decoration: underline;
+            }
+            label, a {
+                font-weight: 200;
+                color: @text-light-color;
+            }
+            .politics {
+                appearance: none;
+                display: inline-block;
+                margin: 0;
+                width: 10px;
+                height: 10px;
+                background-image: url(../img/svg/square_form_input.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                align-self: center;
+                &:checked {
+                    background-image: url(../img/svg/arrow_form_list.svg), url(../img/svg/square_form_input.svg);
+                }
+            }
+        }
+        .btn:disabled, .btn {
+            border: 1px solid @btn-color;
+        }
+    }
+
+    // animation
+    .circles{
+        position: absolute;
+        top: -30%;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+    }
+    
+    .circles li{
+        position: absolute;
+        z-index: 1000;
+        display: block;
+        list-style: none;
+        width: auto;
+        height: auto;
+        border-radius: 100%;
+    }
+    
+    .circles li:nth-child(1){
+        transform: translateX(0);
+        animation: animate_first 5s ease-in-out infinite;
+            animation-fill-mode: forwards;
+    }
+    
+    
+    .circles li:nth-child(2){
+        transform: translateX(33%);
+        animation: animate_second 5s ease-in-out infinite;
+            animation-fill-mode: forwards;
+    }
+    
+    .circles li:nth-child(3){
+        transform: translateX(66%);
+        animation: animate_third 5s ease-in-out infinite;
+            animation-fill-mode: forwards;
+    }
+    
+    @keyframes animate_first {
+        0% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(66%);
+        }
+        50% {
+            transform: translateX(33%);
+        }
+        75% {
+            transform: translateX(66%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    @keyframes animate_second {
+        0% {
+            transform: translateX(33%);
+        }
+        25% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(66%);
+        }
+        75% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(33%);
+        }
+    }
+    @keyframes animate_third {
+        0% {
+            transform: translateX(66%);
+        }
+        25% {
+            transform: translateX(33%);
+        }
+        50% {
+            transform: translateX(0);
+        }
+        75% {
+            transform: translateX(33%);
+        }
+        100% {
+            transform: translateX(66%);
+        }
+    }
 }
+
 
 /* contacts */
 .contacts {
     background-color: @block-color;
     padding: 85px 0;
+    position: relative;
+    z-index: 100;
+    &__title {
+        font-weight: 400;
+        font-size: 235px;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.05);
+        opacity: 0.5;
+
+        user-select: none;
+    }
+    &__record {
+        &--box {
+            display: flex;
+            align-items: center;
+        }
+        &--link {
+            font-family: @second-title-font;
+            font-weight: 400;
+            line-height: 142%;
+            color: @btn-color;
+            padding-right: 30px;
+        }
+    }
+    &__social {
+        &--link {
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: 0.03em;
+            text-align: center;
+            color: @text-light-color;
+        }
+    }
+    &__link {
+        font-size: 19px;
+        text-transform: uppercase;
+
+    }
+    &__arrow {
+        display: flex;
+    }
 }

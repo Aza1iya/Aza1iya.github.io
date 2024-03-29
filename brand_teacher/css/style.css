@@ -69,7 +69,7 @@ h4 {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
-  width: auto;
+  width: 18%;
   background-color: #9747FF;
   border-radius: 15px;
   border: none;
@@ -80,6 +80,11 @@ h4 {
   font-weight: 500;
   line-height: 120%;
   letter-spacing: 0.09em;
+}
+.btn:hover {
+  background-color: #9747FF;
+  opacity: 0.5;
+  color: #000;
 }
 /* header */
 .header {
@@ -472,10 +477,291 @@ h4 {
 .form-connect {
   background-color: #232323;
   padding: 85px 0;
+  color: #fff;
+}
+.form-connect__title-descr {
+  text-align: left;
+}
+.form-connect__wrapper {
+  position: relative;
+}
+.form-connect .form__block-left {
+  padding-top: 70px;
+}
+.form-connect .form__box {
+  padding-top: 30px;
+}
+.form-connect .form .select {
+  position: relative;
+}
+.form-connect .form .new-select {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 15px;
+}
+.form-connect .form .new-select .arrow {
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/svg/arrow_form_list.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.form-connect .form .new-select__list {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background-color: #232323;
+  border: 1px solid #616161;
+  width: 100%;
+  cursor: pointer;
+  z-index: 2;
+  user-select: none;
+}
+.form-connect .form .new-select__list.on {
+  display: block;
+}
+.form-connect .form .new-select__item span {
+  display: block;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.form-connect .form .new-select__item span:hover {
+  background-color: #616161;
+}
+.form-connect .form .new-select__item:last-child span {
+  padding-bottom: 15px;
+}
+.form-connect .form__get-data,
+.form-connect .form__control,
+.form-connect .form .select {
+  width: 100%;
+  height: 30px;
+  border: 0;
+  border-bottom: 1px solid #616161;
+  font-size: 16px;
+  font-weight: 300;
+  background-color: inherit;
+  padding-left: 15px;
+  color: #fff;
+}
+.form-connect .form__get-data option,
+.form-connect .form__control option,
+.form-connect .form .select option {
+  background-color: #232323;
+}
+.form-connect .form__control {
+  padding-left: 12px;
+}
+.form-connect .form ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #fff;
+}
+.form-connect .form :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+  opacity: 1;
+}
+.form-connect .form ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+  opacity: 1;
+}
+.form-connect .form :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff;
+}
+.form-connect .form ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fff;
+}
+.form-connect .form ::placeholder {
+  /* Most modern browsers support this now. */
+  color: #fff;
+}
+.form-connect .form__title {
+  font-size: 16px;
+  font-weight: 300;
+}
+.form-connect .form__block-right .form__box {
+  height: 95%;
+}
+.form-connect .form__block-right .form__box .message__container {
+  height: 100%;
+}
+.form-connect .form__block-right .form__box .message__container textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #616161;
+  border-radius: 25px;
+  background: rgba(97, 97, 97, 0.2);
+  backdrop-filter: blur(20px);
+  resize: none;
+  font-weight: 200;
+  font-size: 16px;
+  color: #fff;
+  padding: 40px;
+}
+.form-connect .form .approval__form {
+  padding-top: 85px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.form-connect .form .approval__form label {
+  padding-left: 15px;
+}
+.form-connect .form .approval__form a {
+  text-decoration: underline;
+}
+.form-connect .form .approval__form label,
+.form-connect .form .approval__form a {
+  font-weight: 200;
+  color: #fff;
+}
+.form-connect .form .approval__form .politics {
+  appearance: none;
+  display: inline-block;
+  margin: 0;
+  width: 10px;
+  height: 10px;
+  background-image: url(../img/svg/square_form_input.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  align-self: center;
+}
+.form-connect .form .approval__form .politics:checked {
+  background-image: url(../img/svg/arrow_form_list.svg), url(../img/svg/square_form_input.svg);
+}
+.form-connect .form .btn:disabled,
+.form-connect .form .btn {
+  border: 1px solid #9747FF;
+}
+.form-connect .circles {
+  position: absolute;
+  top: -30%;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+.form-connect .circles li {
+  position: absolute;
+  z-index: 1000;
+  display: block;
+  list-style: none;
+  width: auto;
+  height: auto;
+  border-radius: 100%;
+}
+.form-connect .circles li:nth-child(1) {
+  transform: translateX(0);
+  animation: animate_first 5s ease-in-out infinite;
+  animation-fill-mode: forwards;
+}
+.form-connect .circles li:nth-child(2) {
+  transform: translateX(33%);
+  animation: animate_second 5s ease-in-out infinite;
+  animation-fill-mode: forwards;
+}
+.form-connect .circles li:nth-child(3) {
+  transform: translateX(66%);
+  animation: animate_third 5s ease-in-out infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes animate_first {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(66%);
+  }
+  50% {
+    transform: translateX(33%);
+  }
+  75% {
+    transform: translateX(66%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes animate_second {
+  0% {
+    transform: translateX(33%);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(66%);
+  }
+  75% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(33%);
+  }
+}
+@keyframes animate_third {
+  0% {
+    transform: translateX(66%);
+  }
+  25% {
+    transform: translateX(33%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(33%);
+  }
+  100% {
+    transform: translateX(66%);
+  }
 }
 /* contacts */
 .contacts {
   background-color: #232323;
   padding: 85px 0;
+  position: relative;
+  z-index: 100;
+}
+.contacts__title {
+  font-weight: 400;
+  font-size: 235px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.05);
+  opacity: 0.5;
+  user-select: none;
+}
+.contacts__record--box {
+  display: flex;
+  align-items: center;
+}
+.contacts__record--link {
+  font-family: "Ledger", sans-serif;
+  font-weight: 400;
+  line-height: 142%;
+  color: #9747FF;
+  padding-right: 30px;
+}
+.contacts__social--link {
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #fff;
+}
+.contacts__link {
+  font-size: 19px;
+  text-transform: uppercase;
+}
+.contacts__arrow {
+  display: flex;
 }
 /*# sourceMappingURL=./style.css.map */
