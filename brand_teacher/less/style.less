@@ -65,7 +65,7 @@ main {
     position: relative;
     top: 100vh;
 }
-h2, h3 {
+h2, h3, h4 {
     font-family: @second-title-font;
     font-weight: 400;
     font-size: 24px;
@@ -448,6 +448,7 @@ ul, ol, p, figure, h1, h2, h3, h4 {
                 font-family: @second-title-font;
                 font-size: 14px;
                 letter-spacing: 0.03em;
+                line-height: 1.2;
                 text-transform: uppercase;
                 color: @text-light-color;
                 text-align: center;
@@ -514,6 +515,54 @@ ul, ol, p, figure, h1, h2, h3, h4 {
 .faq {
     background-color: @block-color;
     padding: 85px 0;
+    color: @text-light-color;
+    &__accordion {
+        margin-top: 50px;
+        &-box {
+            border-top: 1px solid @lines-color;
+            &:last-child {
+                border-bottom: 1px solid @lines-color;
+            }
+        }
+        &-titlebox {
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 25px 0;
+            h4 {
+                font-family: @main-font;
+                font-size: 19px;
+                text-transform: none;
+                text-align: left;
+            }
+            span {
+                transform: rotate(0);
+                transition: transform 0.5s ease-in-out;                
+            }
+            &.active span {
+                transform: rotate(45deg);
+            }
+        }
+        &-text {
+            padding: 0;
+            box-sizing: content-box;
+            font-weight: 200;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: 0.09em;
+            max-height: 0;
+            // opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease-in-out;
+            &.active {
+                visibility: visible;
+                // opacity: 1;
+                padding-bottom: 25px;
+            }
+        }
+    }
 }
 
 /* planner */
@@ -666,15 +715,15 @@ ul, ol, p, figure, h1, h2, h3, h4 {
                 appearance: none;
                 display: inline-block;
                 margin: 0;
-                width: 10px;
-                height: 10px;
+                width: 12px;
+                height: 12px;
                 background-image: url(../img/svg/square_form_input.svg);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: contain;
                 align-self: center;
                 &:checked {
-                    background-image: url(../img/svg/arrow_form_list.svg), url(../img/svg/square_form_input.svg);
+                    background: url(../img/svg/ckeck_mark.svg) bottom center no-repeat, url(../img/svg/square_form_input.svg) center no-repeat;
                 }
             }
         }
