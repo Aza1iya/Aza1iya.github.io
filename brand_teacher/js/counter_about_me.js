@@ -6,7 +6,7 @@ let counterObserver = new IntersectionObserver((entries, observer)=>{
 
   if (!entry.isIntersecting) return;
 
-  let speed = 100;
+  let speed = 1000;
   valueDisplays.forEach((valueDisplay, index) => {
     function UpdateCounter() {
       const targetNumber =+ valueDisplay.dataset.target;
