@@ -179,6 +179,11 @@ h4 {
   font-family: "Ledger", sans-serif;
   font-weight: 400;
   font-size: 40px;
+  opacity: 0;
+}
+.about-me__card-text.hidden-text {
+  opacity: 1;
+  transition: 1s;
 }
 .about-me__card--textbox {
   position: absolute;
@@ -313,6 +318,9 @@ h4 {
 .problems {
   background-color: #E4E5E7;
   padding: 85px 0;
+}
+.problems__title span {
+  color: #9747FF;
 }
 .problems__list {
   padding-top: 55px;
@@ -519,6 +527,7 @@ h4 {
   cursor: pointer;
   z-index: 2;
   user-select: none;
+  padding-bottom: 15px;
 }
 .form-connect .form .new-select__list.on {
   display: block;
@@ -530,9 +539,6 @@ h4 {
 }
 .form-connect .form .new-select__item span:hover {
   background-color: #616161;
-}
-.form-connect .form .new-select__item:last-child span {
-  padding-bottom: 15px;
 }
 .form-connect .form__get-data,
 .form-connect .form__control,
@@ -599,7 +605,7 @@ h4 {
   background: rgba(97, 97, 97, 0.2);
   backdrop-filter: blur(20px);
   resize: none;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 16px;
   color: #fff;
   padding: 40px;
@@ -642,8 +648,6 @@ h4 {
 }
 .form-connect .form .approval__form,
 .form-connect .form .submit {
-  position: relative;
-  z-index: 1500;
   user-select: none;
 }
 .form-connect .circles {
@@ -726,6 +730,7 @@ h4 {
 }
 .form-connect form {
   position: relative;
+  z-index: 2000;
 }
 /* contacts */
 .contacts {

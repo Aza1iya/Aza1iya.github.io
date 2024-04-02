@@ -200,6 +200,11 @@ ul, ol, p, figure, h1, h2, h3, h4 {
             font-family: @second-title-font;
             font-weight: 400;
             font-size: 40px;
+            opacity: 0;
+            &.hidden-text {
+                opacity: 1;
+                transition: 1s;
+            }
         }
         &--textbox {
             position: absolute;
@@ -333,6 +338,9 @@ ul, ol, p, figure, h1, h2, h3, h4 {
 .problems {
     background-color: @light-color;
     padding: 85px 0;
+    &__title span {
+        color: @btn-color;
+    }
     &__list {
         padding-top: 55px;
     }
@@ -562,6 +570,7 @@ ul, ol, p, figure, h1, h2, h3, h4 {
                 cursor: pointer;
                 z-index: 2;
                 user-select: none;
+                padding-bottom: 15px;
                 &.on {
                     display: block;
                 }
@@ -574,9 +583,6 @@ ul, ol, p, figure, h1, h2, h3, h4 {
                     &:hover {
                         background-color: @lines-color;
                     }
-                }
-                &:last-child span {
-                    padding-bottom: 15px;
                 }
             }
         }
@@ -634,7 +640,7 @@ ul, ol, p, figure, h1, h2, h3, h4 {
                     background: rgba(97, 97, 97, 0.2);
                     backdrop-filter: blur(20px);
                     resize: none;
-                    font-weight: 200;
+                    font-weight: 300;
                     font-size: 16px;
                     color: @text-light-color;
                     padding: 40px;
@@ -676,8 +682,6 @@ ul, ol, p, figure, h1, h2, h3, h4 {
             border: 1px solid @btn-color;
         }
         .approval__form, .submit {
-            position: relative;
-            z-index: 1500;
             user-select: none;
         }
     }
@@ -770,6 +774,7 @@ ul, ol, p, figure, h1, h2, h3, h4 {
 
     form {
         position: relative;
+        z-index: 2000;
     }
 }
 
