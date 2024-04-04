@@ -1,7 +1,11 @@
 $(".reviews__slider--list").owlCarousel({
   items: 1, 
-  autoplay: false,
-  slideSpeed: 5000,
+  autoplay: true,
+  autoplaySpeed: 1000,
+  autoWidth: true,
+  smartSpeed: 700,
+  margin: 120,
+  loop: true,
   nav: true,
   navContainer: '.reviews__slider--arrow-box',
   navText: [
@@ -39,6 +43,4 @@ $(".reviews__slider--list").owlCarousel({
     `
   ],  
   dots: true,
-  margin: 100,
-  loop: true
 })

@@ -477,7 +477,6 @@ h4 {
   padding: 85px 0;
 }
 .reviews__slider {
-  margin-top: 55px;
   position: relative;
 }
 .reviews__slider--list {
@@ -492,6 +491,7 @@ h4 {
   flex-direction: column;
   position: relative;
   z-index: 100;
+  width: 1106px;
 }
 .reviews__slider--img img {
   border-radius: 50%;
@@ -521,7 +521,7 @@ h4 {
   margin-bottom: 0;
 }
 .reviews__slider .owl-stage-outer {
-  overflow: visible;
+  padding: 55px 95px 40px;
 }
 .reviews__slider .owl-item {
   background-color: #ececec;
@@ -529,10 +529,9 @@ h4 {
   -moz-border-radius: 25px;
   border-radius: 25px;
   box-shadow: 0 4px 20px 0 #b6b6b6;
-  opacity: 0;
 }
-.reviews__slider .owl-item.active {
-  opacity: 1;
+.reviews__slider .owl-carousel .owl-stage {
+  transition-timing-function: linear !important;
 }
 .reviews__slider--arrow-box {
   position: absolute;
@@ -819,7 +818,7 @@ h4 {
   animation: animate_second 5s ease-in-out infinite;
 }
 .form-connect .circles li:nth-child(3) {
-  transform: translate(66%, -25%);
+  transform: translate(63%, -25%);
   animation: animate_third 5s ease-in-out infinite;
 }
 @keyframes animate_first {
@@ -827,13 +826,13 @@ h4 {
     transform: translate(0, -25%);
   }
   25% {
-    transform: translate(66%, -25%);
+    transform: translate(63%, -25%);
   }
   50% {
     transform: translate(33%, 0);
   }
   75% {
-    transform: translate(66%, -25%);
+    transform: translate(63%, -25%);
   }
   100% {
     transform: translate(0, -25%);
@@ -847,7 +846,7 @@ h4 {
     transform: translate(0, -25%);
   }
   50% {
-    transform: translate(66%, -25%);
+    transform: translate(63%, -25%);
   }
   75% {
     transform: translate(0, -25%);
@@ -858,7 +857,7 @@ h4 {
 }
 @keyframes animate_third {
   0% {
-    transform: translate(66%, -25%);
+    transform: translate(63%, -25%);
   }
   25% {
     transform: translate(33%, 0);
@@ -870,7 +869,7 @@ h4 {
     transform: translate(33%, 0);
   }
   100% {
-    transform: translate(66%, -25%);
+    transform: translate(63%, -25%);
   }
 }
 .form-connect form {

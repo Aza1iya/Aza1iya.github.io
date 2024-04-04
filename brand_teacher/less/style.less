@@ -513,7 +513,6 @@ ul, ol, p, figure, h1, h2, h3, h4 {
     background-color: @light-color;
     padding: 85px 0;
     &__slider {
-        margin-top: 55px;
         position: relative;
         &--list {
             display: flex;
@@ -529,6 +528,8 @@ ul, ol, p, figure, h1, h2, h3, h4 {
 
             position: relative;
             z-index: 100;
+
+            width: 1106px;
         }
         &--img {
             img {
@@ -560,7 +561,7 @@ ul, ol, p, figure, h1, h2, h3, h4 {
             }
         }
         .owl-stage-outer {
-            overflow: visible;
+            padding: 55px 95px 40px;
         }
         .owl-item {
             background-color: @block-sq-color;
@@ -569,12 +570,9 @@ ul, ol, p, figure, h1, h2, h3, h4 {
             border-radius: 25px;
 
             box-shadow: 0 4px 20px 0 @shadow-color;
-
-            opacity: 0;
-
-            &.active {
-                opacity: 1;
-            }
+        }
+        .owl-carousel .owl-stage {
+            transition-timing-function: linear !important;
         }
         &--arrow-box {
             position: absolute;
@@ -865,7 +863,7 @@ ul, ol, p, figure, h1, h2, h3, h4 {
     }
     
     .circles li:nth-child(3){
-        transform: translate(66%, -25%);
+        transform: translate(63%, -25%);
         animation: animate_third 5s ease-in-out infinite;
     }
     
@@ -874,13 +872,13 @@ ul, ol, p, figure, h1, h2, h3, h4 {
             transform: translate(0, -25%);
         }
         25% {
-            transform: translate(66%, -25%);
+            transform: translate(63%, -25%);
         }
         50% {
             transform: translate(33%, 0);
         }
         75% {
-            transform: translate(66%, -25%);
+            transform: translate(63%, -25%);
         }
         100% {
             transform: translate(0, -25%);
@@ -894,7 +892,7 @@ ul, ol, p, figure, h1, h2, h3, h4 {
             transform: translate(0, -25%);
         }
         50% {
-            transform: translate(66%, -25%);
+            transform: translate(63%, -25%);
         }
         75% {
             transform: translate(0, -25%)
@@ -905,7 +903,7 @@ ul, ol, p, figure, h1, h2, h3, h4 {
     }
     @keyframes animate_third {
         0% {
-            transform: translate(66%, -25%);
+            transform: translate(63%, -25%);
         }
         25% {
             transform: translate(33%, 0);
@@ -917,7 +915,7 @@ ul, ol, p, figure, h1, h2, h3, h4 {
             transform: translate(33%, 0);
         }
         100% {
-            transform: translate(66%, -25%);
+            transform: translate(63%, -25%);
         }
     }
 
