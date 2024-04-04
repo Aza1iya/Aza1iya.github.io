@@ -520,11 +520,18 @@ h4 {
   margin-bottom: 0;
 }
 .reviews__slider .owl-stage-outer {
+  overflow: visible;
+}
+.reviews__slider .owl-item {
   background-color: #ececec;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
   box-shadow: 0 4px 20px 0 #b6b6b6;
+  opacity: 0;
+}
+.reviews__slider .owl-item.active {
+  opacity: 1;
 }
 .reviews__slider--arrow-box {
   position: absolute;

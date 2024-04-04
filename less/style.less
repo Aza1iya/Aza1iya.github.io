@@ -559,6 +559,9 @@ ul, ol, p, figure, h1, h2, h3, h4 {
             }
         }
         .owl-stage-outer {
+            overflow: visible;
+        }
+        .owl-item {
             background-color: @block-sq-color;
             -webkit-border-radius: 25px;
             -moz-border-radius: 25px;
@@ -566,6 +569,11 @@ ul, ol, p, figure, h1, h2, h3, h4 {
 
             box-shadow: 0 4px 20px 0 @shadow-color;
 
+            opacity: 0;
+
+            &.active {
+                opacity: 1;
+            }
         }
         &--arrow-box {
             position: absolute;
@@ -844,12 +852,11 @@ ul, ol, p, figure, h1, h2, h3, h4 {
         height: auto;
         border-radius: 100%;
     }
-    
+
     .circles li:nth-child(1){
         transform: translate(0, -25%);
         animation: animate_first 5s ease-in-out infinite;
     }
-    
     
     .circles li:nth-child(2){
         transform: translate(33%, 0);
