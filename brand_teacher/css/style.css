@@ -100,12 +100,14 @@ h4 {
 }
 /* intro */
 .intro {
+  color: #fff;
+}
+.intro__block {
   display: flex;
   height: 100vh;
   position: fixed;
   top: 0px;
   z-index: -100;
-  color: #fff;
 }
 .intro__image {
   background-image: url(https://www.dummyimage.com/645x521/bfbfbf/fff.jpg);
@@ -128,6 +130,7 @@ h4 {
 }
 .intro__biography--text {
   margin-bottom: 5em;
+  text-align: justify;
 }
 .intro__arrow {
   justify-self: center;
@@ -214,6 +217,7 @@ h4 {
   transform: translateX(-35%) scaleX(0);
   opacity: 0;
   transition: all 0.5s ease-in-out;
+  z-index: 200;
 }
 .about-me #first_box_info.visible,
 .about-me #second_box_info.visible,
@@ -228,6 +232,7 @@ h4 {
 .about-me #fourth_box_count {
   opacity: 1;
   transition: all 0.5s ease-in-out;
+  z-index: 200;
 }
 .about-me #first_box_count.hidden,
 .about-me #second_box_count.hidden,
@@ -241,6 +246,7 @@ h4 {
   overflow: hidden;
   background-color: #E4E5E7;
   padding: 85px 0 35px;
+  color: #fff;
 }
 .competence__slider--block {
   height: 430px;
@@ -260,9 +266,6 @@ h4 {
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
-}
-.competence__slider--item a {
-  color: #fff;
 }
 .competence__slider .lorem_sq {
   width: 200px;
@@ -473,6 +476,98 @@ h4 {
   background-color: #E4E5E7;
   padding: 85px 0;
 }
+.reviews__slider {
+  margin-top: 55px;
+  position: relative;
+}
+.reviews__slider--list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.reviews__slider--item {
+  padding: 45px 65px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 100;
+}
+.reviews__slider--img img {
+  border-radius: 50%;
+}
+.reviews__slider--people {
+  margin-top: 25px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+}
+.reviews__slider--people p {
+  margin-bottom: 5px;
+}
+.reviews__slider--people span {
+  font-weight: 300;
+  font-size: 14px;
+}
+.reviews__slider--block {
+  margin-top: 40px;
+  font-weight: 300;
+}
+.reviews__slider--block p {
+  margin-bottom: 1.5em;
+}
+.reviews__slider--block p:last-child {
+  margin-bottom: 0;
+}
+.reviews__slider .owl-stage-outer {
+  overflow: visible;
+}
+.reviews__slider .owl-item {
+  background-color: #ececec;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  box-shadow: 0 4px 20px 0 #b6b6b6;
+  opacity: 0;
+}
+.reviews__slider .owl-item.active {
+  opacity: 1;
+}
+.reviews__slider--arrow-box {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.reviews__slider--arrow-box .owl-prev,
+.reviews__slider--arrow-box .owl-next {
+  background-color: transparent;
+}
+.reviews__slider--arrow-box .owl-prev {
+  transform: rotate(180deg);
+}
+.reviews__slider .owl-dots {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reviews__slider .owl-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 1px solid #616161;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+.reviews__slider .owl-dots button.active {
+  background-color: #616161;
+}
 /* faq */
 .faq {
   background-color: #232323;
@@ -517,11 +612,13 @@ h4 {
   line-height: 120%;
   letter-spacing: 0.09em;
   max-height: 0;
+  opacity: 0;
   visibility: hidden;
   transition: all 0.5s ease-in-out;
 }
 .faq__accordion-text.active {
   visibility: visible;
+  opacity: 1;
   padding-bottom: 25px;
 }
 /* planner */
@@ -575,15 +672,14 @@ h4 {
   cursor: pointer;
   z-index: 2;
   user-select: none;
-  padding-bottom: 15px;
+  padding: 7.5px 0;
 }
 .form-connect .form .new-select__list.on {
   display: block;
 }
 .form-connect .form .new-select__item span {
   display: block;
-  padding-top: 15px;
-  padding-left: 15px;
+  padding: 7.5px 15px;
 }
 .form-connect .form .new-select__item span:hover {
   background-color: #616161;
@@ -669,6 +765,7 @@ h4 {
 }
 .form-connect .form .approval__form a {
   text-decoration: underline;
+  background-color: inherit;
 }
 .form-connect .form .approval__form label,
 .form-connect .form .approval__form a {
@@ -714,66 +811,66 @@ h4 {
   border-radius: 100%;
 }
 .form-connect .circles li:nth-child(1) {
-  transform: translate3d(0, 0, 0);
+  transform: translate(0, -25%);
   animation: animate_first 5s ease-in-out infinite;
 }
 .form-connect .circles li:nth-child(2) {
-  transform: translate3d(33%, 0, 10em) scale(0.5, 0.5);
+  transform: translate(33%, 0);
   animation: animate_second 5s ease-in-out infinite;
 }
 .form-connect .circles li:nth-child(3) {
-  transform: translate3d(66%, 0, 0);
+  transform: translate(66%, -25%);
   animation: animate_third 5s ease-in-out infinite;
 }
 @keyframes animate_first {
   0% {
-    transform: translate3d(0, 0, 0);
+    transform: translate(0, -25%);
   }
   25% {
-    transform: translate3d(66%, 0, 0);
+    transform: translate(66%, -25%);
   }
   50% {
-    transform: translate3d(33%, 0, 10em) scale(0.5, 0.5);
+    transform: translate(33%, 0);
   }
   75% {
-    transform: translate3d(66%, 0, 0);
+    transform: translate(66%, -25%);
   }
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translate(0, -25%);
   }
 }
 @keyframes animate_second {
   0% {
-    transform: translate3d(33%, 0, 10em) scale(0.5, 0.5);
+    transform: translate(33%, 0);
   }
   25% {
-    transform: translate3d(0, 0, 0);
+    transform: translate(0, -25%);
   }
   50% {
-    transform: translate3d(66%, 0, 0);
+    transform: translate(66%, -25%);
   }
   75% {
-    transform: translate3d(0, 0, 0);
+    transform: translate(0, -25%);
   }
   100% {
-    transform: translate3d(33%, 0, 10em) scale(0.5, 0.5);
+    transform: translate(33%, 0);
   }
 }
 @keyframes animate_third {
   0% {
-    transform: translate3d(66%, 0, 0);
+    transform: translate(66%, -25%);
   }
   25% {
-    transform: translate3d(33%, 0, 10em) scale(0.5, 0.5);
+    transform: translate(33%, 0);
   }
   50% {
-    transform: translate3d(0, 0, 0);
+    transform: translate(0, -25%);
   }
   75% {
-    transform: translate3d(33%, 0, 10em) scale(0.5, 0.5);
+    transform: translate(33%, 0);
   }
   100% {
-    transform: translate3d(66%, 0, 0);
+    transform: translate(66%, -25%);
   }
 }
 .form-connect form {
