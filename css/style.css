@@ -130,6 +130,7 @@ h4 {
 }
 .intro__biography--text {
   margin-bottom: 5em;
+  text-align: justify;
 }
 .intro__arrow {
   justify-self: center;
