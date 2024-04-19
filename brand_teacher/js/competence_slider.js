@@ -4,7 +4,7 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     prevArrow: '.competence__slider--arrow-prev',
     nextArrow: '.competence__slider--arrow-next',

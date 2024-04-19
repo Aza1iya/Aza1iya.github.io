@@ -1,7 +1,7 @@
 $(".reviews__slider--list").owlCarousel({
   items: 1, 
-  autoplay: true,
-  autoplaySpeed: 1000,
+  // autoplay: true,
+  // autoplaySpeed: 1000,
   autoWidth: true,
   smartSpeed: 700,
   margin: 120,

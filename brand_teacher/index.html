@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Личный бренд</title>
+    <title>Личный бренд Кадеевой Зульфии Каюмовны</title>
+    <meta 
+      name="description"
+      content="Краткое описание страницы"
+    >
+    <meta
+      name="keywords"
+      content="ключевое слово 1, ключевое слово 2, ключевое слово 3"
+    >    
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,15 +21,24 @@
   <body>
     <header class="header">
       <section class="container">
-        <nav class="header__nav row">
-          <ul class="header__list col-lg-8 offset-lg-2">
-            <li class="header__item nav-item">Компетенции</li>
-            <li class="header__item nav-item">Выступления</li>
-            <li class="header__item nav-item">Блог</li>
-            <li class="header__item nav-item">Отзывы</li>
-            <li class="header__item nav-item">Контакты</li>
-          </ul>
-        </nav>
+        <div class="header__box">
+          <nav class="header__nav row">
+            <ul class="header__list col-md-8 offset-md-2">
+              <li class="header__item nav-item"><a href="#competence__slider">Компетенции</a></li>
+              <li class="header__item nav-item"><a href="#perfomance">Выступления</a></li>
+              <li class="header__item nav-item"><a href="#reviews">Отзывы</a></li>
+              <li class="header__item nav-item"><a href="#contacts">Контакты</a></li>
+            </ul>
+          </nav>     
+          <div class="header__nav-close">
+            <span class="header__nav-close-line"></span>
+            <span class="header__nav-close-line"></span>
+          </div> 
+        </div>
+        <div class="header__burger burger">
+          <span class="burger__line burger__line"></span>
+          <span class="burger__line burger__line"></span>
+        </div>    
       </section>
     </header>
     <main class="main">
@@ -31,11 +48,11 @@
             <div class="col-lg-6 intro__image--block">
               <div class="intro__image"></div>
             </div>
-            <div class="col-lg-5 offset-lg-1 intro__biography--block">
-              <h1 class="intro__title">
+            <div itemscope itemtype="http://schema.org/Person" class="col-lg-5 offset-lg-1 intro__biography--block">
+              <h1 itemprop="name" class="intro__title">
                 <span>кадеева</span><br />зульфия каюмовна
               </h1>
-              <p class="intro__biography--text">
+              <p itemprop="description" class="intro__biography--text">
                 Далеко-далеко за словесными горами, в стране гласных и согласных
                 живут рыбные тексты. Предупреждал ему ты повстречался запятой
                 наш злых большой пояс заглавных!
@@ -61,10 +78,10 @@
       <section class="about-me">
         <div class="container">
           <div class="about-me__block row">
-            <h2 class="about-me__title col-lg-6 offset-lg-3">обо мне</h2>
+            <h2 class="about-me__title col-md-6 offset-md-3">обо мне</h2>
           </div>
-          <div class="about-me__list row gx-lg-5" id="counter">
-            <div class="col-lg-3 about-me__item" id="first_box_count">
+          <div class="about-me__list row gx-xxl-5 gx-md-4" id="counter">
+            <div class="col-md-3 about-me__item" id="first_box_count">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
                   <h3 class="about-me__card-title card-title">стаж работы</h3>
@@ -72,7 +89,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 about-me__item" id="second_box_count">
+            <div class="col-md-3 about-me__item" id="second_box_count">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
                   <h3 class="about-me__card-title card-title">Далеко-далеко, за.</h3>
@@ -80,7 +97,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 about-me__item" id="third_box_count">
+            <div class="col-md-3 about-me__item" id="third_box_count">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
                   <h3 class="about-me__card-title card-title">Далеко-далеко, за.</h3>
@@ -88,7 +105,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 about-me__item" id="fourth_box_count">
+            <div class="col-md-3 about-me__item" id="fourth_box_count">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
                   <h3 class="about-me__card-title card-title">Далеко-далеко, за.</h3>
@@ -96,7 +113,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-9 about-me__card--textbox" id="first_box_info">
+            <div class="col-md-9 about-me__card--textbox" id="first_box_info">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
                   <p class="about-me__card-fulltext card">
@@ -111,7 +128,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-9 about-me__card--textbox" id="second_box_info">
+            <div class="col-md-9 about-me__card--textbox" id="second_box_info">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
                   <p class="about-me__card-fulltext card">
@@ -126,7 +143,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-9 about-me__card--textbox" id="third_box_info">
+            <div class="col-md-9 about-me__card--textbox" id="third_box_info">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
                   <p class="about-me__card-fulltext card">
@@ -141,7 +158,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-9 about-me__card--textbox" id="fourth_box_info">
+            <div class="col-md-9 about-me__card--textbox" id="fourth_box_info">
               <div class="about-me__card card">
                 <div class="about-me__card-body card-body">
                   <p class="about-me__card-fulltext card">
@@ -158,154 +175,132 @@
             </div>
           </div>
           <div class="about-me__btn">
-            <a class="btn btn-primary" href="#" role="button"
-              >Перейти в Telegram</a
-            >
+            <a target="_blank" class="btn btn-primary" href="https://t.me/SENSIBLYAUDACIOUSCIENCE" role="button"
+              >Перейти в Telegram</a>
           </div>
         </div>
       </section>
-      <section class="competence__slider">
+      <section class="competence__slider" id="competence__slider">
         <div class="container">
           <div class="competence__slider--block">
             <div class="competence__slider--box">
               <ul class="competence__slider--list">
-                <li class="competence__slider--item">
-                  <figure class="competence__slider--figure">
-                                          <div class="lorem_sq"></div>
+                <li itemscope itemtype="http://schema.org/CreativeWork" class="competence__slider--item">
+                  <figure itemprop="image" class="competence__slider--figure">
+                    <div class="lorem_sq"></div>
                   </figure>
                   <div class="competence__slider--descr">
-                    <h3 class="competence__slider--title">
+                    <h3 itemprop="headline" class="competence__slider--title">
                       Название компетенции 11111
                     </h3>
-                    <div class="competence__slider--preview">
+                    <div itemprop="text" class="competence__slider--preview">
                       Далеко-далеко за словесными горами, в стране гласных и
                       согласных живут рыбные тексты. Скатился живет
                       парадигматическая грустный гор, безопасную взгляд своих, путь
                       домах возвращайся вершину послушавшись имеет пор она
-                      буквоград! Страну буквоград даль имени, встретил маленькая
-                      путь единственное рекламных рыбного рот возвращайся,
-                      послушавшись, обеспечивает сих. Рукопись моей жизни одна прямо
-                      родного дал большой.                      
+                      буквоград!                      
                     </div>
                   </div>
                 </li>
-                <li class="competence__slider--item">
-                  <figure class="competence__slider--figure">
-                                          <div class="lorem_sq"></div>
+                <li itemscope itemtype="http://schema.org/CreativeWork" class="competence__slider--item">
+                  <figure itemprop="image" class="competence__slider--figure">
+                    <div class="lorem_sq"></div>
                   </figure>
                   <div class="competence__slider--descr">
-                    <h3 class="competence__slider--title">
+                    <h3 itemprop="headline" class="competence__slider--title">
                       Название компетенции 22222
                     </h3>
-                    <div class="competence__slider--preview">
+                    <div itemprop="text" class="competence__slider--preview">
                       Далеко-далеко за словесными горами, в стране гласных и
                       согласных живут рыбные тексты. Скатился живет
                       парадигматическая грустный гор, безопасную взгляд своих, путь
                       домах возвращайся вершину послушавшись имеет пор она
-                      буквоград! Страну буквоград даль имени, встретил маленькая
-                      путь единственное рекламных рыбного рот возвращайся,
-                      послушавшись, обеспечивает сих. Рукопись моей жизни одна прямо
-                      родного дал большой.                      
+                      буквоград!                      
                     </div>
                   </div>
                 </li>
-                <li class="competence__slider--item">
-                  <figure class="competence__slider--figure">
-                                          <div class="lorem_sq"></div>
+                <li itemscope itemtype="http://schema.org/CreativeWork" class="competence__slider--item">
+                  <figure itemprop="image" class="competence__slider--figure">
+                    <div class="lorem_sq"></div>
                   </figure>
                   <div class="competence__slider--descr">
-                    <h3 class="competence__slider--title">
+                    <h3 itemprop="headline" class="competence__slider--title">
                       Название компетенции 33333
                     </h3>
-                    <div class="competence__slider--preview">
+                    <div itemprop="text" class="competence__slider--preview">
                       Далеко-далеко за словесными горами, в стране гласных и
                       согласных живут рыбные тексты. Скатился живет
                       парадигматическая грустный гор, безопасную взгляд своих, путь
                       домах возвращайся вершину послушавшись имеет пор она
-                      буквоград! Страну буквоград даль имени, встретил маленькая
-                      путь единственное рекламных рыбного рот возвращайся,
-                      послушавшись, обеспечивает сих. Рукопись моей жизни одна прямо
-                      родного дал большой.                      
+                      буквоград!                      
                     </div>
                   </div>
                 </li>
-                <li class="competence__slider--item">
-                  <figure class="competence__slider--figure">
-                                          <div class="lorem_sq"></div>
+                <li itemscope itemtype="http://schema.org/CreativeWork" class="competence__slider--item">
+                  <figure itemprop="image" class="competence__slider--figure">
+                    <div class="lorem_sq"></div>
                   </figure>
                   <div class="competence__slider--descr">
-                    <h3 class="competence__slider--title">
+                    <h3 itemprop="headline" class="competence__slider--title">
                       Название компетенции 44444
                     </h3>
-                    <div class="competence__slider--preview">
+                    <div itemprop="text" class="competence__slider--preview">
                       Далеко-далеко за словесными горами, в стране гласных и
                       согласных живут рыбные тексты. Скатился живет
                       парадигматическая грустный гор, безопасную взгляд своих, путь
                       домах возвращайся вершину послушавшись имеет пор она
-                      буквоград! Страну буквоград даль имени, встретил маленькая
-                      путь единственное рекламных рыбного рот возвращайся,
-                      послушавшись, обеспечивает сих. Рукопись моей жизни одна прямо
-                      родного дал большой.                      
+                      буквоград!                      
                     </div>
                   </div>
                 </li>
-                <li class="competence__slider--item">
-                  <figure class="competence__slider--figure">
-                                          <div class="lorem_sq"></div>
+                <li itemscope itemtype="http://schema.org/CreativeWork" class="competence__slider--item">
+                  <figure itemprop="image" class="competence__slider--figure">
+                    <div class="lorem_sq"></div>
                   </figure>
                   <div class="competence__slider--descr">
-                    <h3 class="competence__slider--title">
+                    <h3 itemprop="headline" class="competence__slider--title">
                       Название компетенции 55555
                     </h3>
-                    <div class="competence__slider--preview">
+                    <div itemprop="text" class="competence__slider--preview">
                       Далеко-далеко за словесными горами, в стране гласных и
                       согласных живут рыбные тексты. Скатился живет
                       парадигматическая грустный гор, безопасную взгляд своих, путь
                       домах возвращайся вершину послушавшись имеет пор она
-                      буквоград! Страну буквоград даль имени, встретил маленькая
-                      путь единственное рекламных рыбного рот возвращайся,
-                      послушавшись, обеспечивает сих. Рукопись моей жизни одна прямо
-                      родного дал большой.                      
+                      буквоград!                      
                     </div>
                   </div>
                 </li>
-                <li class="competence__slider--item">
-                  <figure class="competence__slider--figure">
-                                          <div class="lorem_sq"></div>
+                <li itemscope itemtype="http://schema.org/CreativeWork" class="competence__slider--item">
+                  <figure itemprop="image" class="competence__slider--figure">
+                    <div class="lorem_sq"></div>
                   </figure>
                   <div class="competence__slider--descr">
-                    <h3 class="competence__slider--title">
+                    <h3 itemprop="headline" class="competence__slider--title">
                       Название компетенции 66666
                     </h3>
-                    <div class="competence__slider--preview">
+                    <div itemprop="text" class="competence__slider--preview">
                       Далеко-далеко за словесными горами, в стране гласных и
                       согласных живут рыбные тексты. Скатился живет
                       парадигматическая грустный гор, безопасную взгляд своих, путь
                       домах возвращайся вершину послушавшись имеет пор она
-                      буквоград! Страну буквоград даль имени, встретил маленькая
-                      путь единственное рекламных рыбного рот возвращайся,
-                      послушавшись, обеспечивает сих. Рукопись моей жизни одна прямо
-                      родного дал большой.                      
+                      буквоград!                      
                     </div>
                   </div>
                 </li>
-                <li class="competence__slider--item"> 
-                  <figure class="competence__slider--figure">
-                                          <div class="lorem_sq"></div>
+                <li itemscope itemtype="http://schema.org/CreativeWork" class="competence__slider--item"> 
+                  <figure itemprop="image" class="competence__slider--figure">
+                    <div class="lorem_sq"></div>
                   </figure>
                   <div class="competence__slider--descr">
-                    <h3 class="competence__slider--title">
+                    <h3 itemprop="headline" class="competence__slider--title">
                       Название компетенции 77777
                     </h3>
-                    <div class="competence__slider--preview">
+                    <div itemprop="text" class="competence__slider--preview">
                       Далеко-далеко за словесными горами, в стране гласных и
                       согласных живут рыбные тексты. Скатился живет
                       парадигматическая грустный гор, безопасную взгляд своих, путь
                       домах возвращайся вершину послушавшись имеет пор она
-                      буквоград! Страну буквоград даль имени, встретил маленькая
-                      путь единственное рекламных рыбного рот возвращайся,
-                      послушавшись, обеспечивает сих. Рукопись моей жизни одна прямо
-                      родного дал большой.                      
+                      буквоград!                      
                     </div>
                   </div>
                 </li>
@@ -345,7 +340,7 @@
           </div>
         </div>
       </section>
-      <!-- <section class="perfomance">
+      <!-- <section class="perfomance" id="perfomance">
         <div class="container">
           
         </div>
@@ -357,53 +352,53 @@
           </div>
           <ul class="problems__list row g-5">
             <li class="col-lg-6">
-              <div class="problems__item first card">
+              <div itemscope itemtype="http://schema.org/Thing" class="problems__item first card">
                 <div class="problems__item--info card-body">
-                  <h3 class="problems__item--title card-title">название проблемы 111</h3>
-                  <p class="problems__item--text card-text">
+                  <h3 itemprop="name" class="problems__item--title card-title">название проблемы 111</h3>
+                  <p itemprop="description" class="problems__item--text card-text">
                     Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Рекламных вдали свою меня силуэт власти, рыбного взобравшись семь толку курсивных раз маленький, прямо путь города, вершину имеет! Жаренные, ее.
                   </p>
                 </div>      
-                <figure class="problems__item--icon">
+                <figure itemprop="image" class="problems__item--icon">
                   <div class="lorem_sq"></div>
                 </figure>          
               </div>
             </li>
             <li class="col-lg-6">
-              <div class="problems__item second card">
+              <div itemscope itemtype="http://schema.org/Thing" class="problems__item second card">
                 <div class="problems__item--info card-body">
-                  <h3 class="problems__item--title card-title">название проблемы 111</h3>
-                  <p class="problems__item--text card-text">
+                  <h3 itemprop="name" class="problems__item--title card-title">название проблемы 111</h3>
+                  <p itemprop="description" class="problems__item--text card-text">
                     Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Рекламных вдали свою меня силуэт власти, рыбного взобравшись семь толку курсивных раз маленький, прямо путь города, вершину имеет! Жаренные, ее.
                   </p>
                 </div>      
-                <figure class="problems__item--icon">
+                <figure itemprop="image" class="problems__item--icon">
                   <div class="lorem_sq"></div>
                 </figure>          
               </div>
             </li>
             <li class="col-lg-6">
-              <div class="problems__item second card">
+              <div itemscope itemtype="http://schema.org/Thing" class="problems__item second card">
                 <div class="problems__item--info card-body">
-                  <h3 class="problems__item--title card-title">название проблемы 111</h3>
-                  <p class="problems__item--text card-text">
+                  <h3 itemprop="name" class="problems__item--title card-title">название проблемы 111</h3>
+                  <p itemprop="description" class="problems__item--text card-text">
                     Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Рекламных вдали свою меня силуэт власти, рыбного взобравшись семь толку курсивных раз маленький, прямо путь города, вершину имеет! Жаренные, ее.
                   </p>
                 </div>      
-                <figure class="problems__item--icon">
+                <figure itemprop="image" class="problems__item--icon">
                   <div class="lorem_sq"></div>
                 </figure>          
               </div>
             </li>
             <li class="col-lg-6">
-              <div class="problems__item first card">
+              <div itemscope itemtype="http://schema.org/Thing" class="problems__item first card">
                 <div class="problems__item--info card-body">
-                  <h3 class="problems__item--title card-title">название проблемы 111</h3>
-                  <p class="problems__item--text card-text">
+                  <h3 itemprop="name" class="problems__item--title card-title">название проблемы 111</h3>
+                  <p itemprop="description" class="problems__item--text card-text">
                     Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Рекламных вдали свою меня силуэт власти, рыбного взобравшись семь толку курсивных раз маленький, прямо путь города, вершину имеет! Жаренные, ее.
                   </p>
                 </div>      
-                <figure class="problems__item--icon">
+                <figure itemprop="image" class="problems__item--icon">
                   <div class="lorem_sq"></div>
                 </figure>          
               </div>
@@ -511,7 +506,7 @@
           </div>
         </div>
       </section>
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <div class="container">
           <div class="reviews__block row">
             <h2 class="reviews__title col-lg-8 offset-lg-2">обо мне пишут</h2>
@@ -519,132 +514,152 @@
           <div class="reviews__slider">
             <div class="reviews__slider--box">
               <ul class="reviews__slider--list owl-carousel">
-                <li class="reviews__slider--item">
-                  <div class="reviews__slider--img">
-                    <img src="./img/jpg/people.jpg" alt="Фото клиента">
+                <li itemscope itemtype="http://schema.org/Review" class="reviews__slider--item">
+                  <div itemscope itemtype="http://schema.org/Person" class="reviews__people-box">
+                    <div class="reviews__slider--img">
+                      <img itemprop="image" src="./img/jpg/people.jpg" alt="Фото клиента">
+                    </div>
+                    <div class="reviews__slider--people">
+                      <p itemprop="author" class="reviews__slider--name">Фамилия Имя</p>
+                      <span itemprop="jobTitle" class="reviews__slider--job">Должность/специальность</span>
+                    </div>
                   </div>
-                  <div class="reviews__slider--people">
-                    <p class="reviews__slider--name">Фамилия Имя</p>
-                    <span class="reviews__slider--job">Должность/специальность</span>
-                  </div>
-                  <div class="reviews__slider--block">
+                  <div itemprop="reviewBody" class="reviews__slider--block">
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                   </div>
                 </li>
-                <li class="reviews__slider--item">
-                  <div class="reviews__slider--img">
-                    <img src="./img/jpg/people.jpg" alt="Фото клиента">
+                <li itemscope itemtype="http://schema.org/Review" class="reviews__slider--item">
+                  <div itemscope itemtype="http://schema.org/Person" class="reviews__people-box">
+                    <div class="reviews__slider--img">
+                      <img itemprop="image" src="./img/jpg/people.jpg" alt="Фото клиента">
+                    </div>
+                    <div class="reviews__slider--people">
+                      <p itemprop="author" class="reviews__slider--name">Фамилия Имя</p>
+                      <span itemprop="jobTitle" class="reviews__slider--job">Должность/специальность</span>
+                    </div>
                   </div>
-                  <div class="reviews__slider--people">
-                    <p class="reviews__slider--name">Фамилия Имя</p>
-                    <span class="reviews__slider--job">Должность/специальность</span>
-                  </div>
-                  <div class="reviews__slider--block">
+                  <div itemprop="reviewBody" class="reviews__slider--block">
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                   </div>
                 </li>
-                <li class="reviews__slider--item">
-                  <div class="reviews__slider--img">
-                    <img src="./img/jpg/people.jpg" alt="Фото клиента">
+                <li itemscope itemtype="http://schema.org/Review" class="reviews__slider--item">
+                  <div itemscope itemtype="http://schema.org/Person" class="reviews__people-box">
+                    <div class="reviews__slider--img">
+                      <img itemprop="image" src="./img/jpg/people.jpg" alt="Фото клиента">
+                    </div>
+                    <div class="reviews__slider--people">
+                      <p itemprop="author" class="reviews__slider--name">Фамилия Имя</p>
+                      <span itemprop="jobTitle" class="reviews__slider--job">Должность/специальность</span>
+                    </div>
                   </div>
-                  <div class="reviews__slider--people">
-                    <p class="reviews__slider--name">Фамилия Имя</p>
-                    <span class="reviews__slider--job">Должность/специальность</span>
-                  </div>
-                  <div class="reviews__slider--block">
+                  <div itemprop="reviewBody" class="reviews__slider--block">
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                   </div>
                 </li>
-                <li class="reviews__slider--item">
-                  <div class="reviews__slider--img">
-                    <img src="./img/jpg/people.jpg" alt="Фото клиента">
+                <li itemscope itemtype="http://schema.org/Review" class="reviews__slider--item">
+                  <div itemscope itemtype="http://schema.org/Person" class="reviews__people-box">
+                    <div class="reviews__slider--img">
+                      <img itemprop="image" src="./img/jpg/people.jpg" alt="Фото клиента">
+                    </div>
+                    <div class="reviews__slider--people">
+                      <p itemprop="author" class="reviews__slider--name">Фамилия Имя</p>
+                      <span itemprop="jobTitle" class="reviews__slider--job">Должность/специальность</span>
+                    </div>
                   </div>
-                  <div class="reviews__slider--people">
-                    <p class="reviews__slider--name">Фамилия Имя</p>
-                    <span class="reviews__slider--job">Должность/специальность</span>
-                  </div>
-                  <div class="reviews__slider--block">
+                  <div itemprop="reviewBody" class="reviews__slider--block">
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                   </div>
                 </li>
-                <li class="reviews__slider--item">
-                  <div class="reviews__slider--img">
-                    <img src="./img/jpg/people.jpg" alt="Фото клиента">
+                <li itemscope itemtype="http://schema.org/Review" class="reviews__slider--item">
+                  <div itemscope itemtype="http://schema.org/Person" class="reviews__people-box">
+                    <div class="reviews__slider--img">
+                      <img itemprop="image" src="./img/jpg/people.jpg" alt="Фото клиента">
+                    </div>
+                    <div class="reviews__slider--people">
+                      <p itemprop="author" class="reviews__slider--name">Фамилия Имя</p>
+                      <span itemprop="jobTitle" class="reviews__slider--job">Должность/специальность</span>
+                    </div>
                   </div>
-                  <div class="reviews__slider--people">
-                    <p class="reviews__slider--name">Фамилия Имя</p>
-                    <span class="reviews__slider--job">Должность/специальность</span>
-                  </div>
-                  <div class="reviews__slider--block">
+                  <div itemprop="reviewBody" class="reviews__slider--block">
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                   </div>
                 </li>
-                <li class="reviews__slider--item">
-                  <div class="reviews__slider--img">
-                    <img src="./img/jpg/people.jpg" alt="Фото клиента">
+                <li itemscope itemtype="http://schema.org/Review" class="reviews__slider--item">
+                  <div itemscope itemtype="http://schema.org/Person" class="reviews__people-box">
+                    <div class="reviews__slider--img">
+                      <img itemprop="image" src="./img/jpg/people.jpg" alt="Фото клиента">
+                    </div>
+                    <div class="reviews__slider--people">
+                      <p itemprop="author" class="reviews__slider--name">Фамилия Имя</p>
+                      <span itemprop="jobTitle" class="reviews__slider--job">Должность/специальность</span>
+                    </div>
                   </div>
-                  <div class="reviews__slider--people">
-                    <p class="reviews__slider--name">Фамилия Имя</p>
-                    <span class="reviews__slider--job">Должность/специальность</span>
-                  </div>
-                  <div class="reviews__slider--block">
+                  <div itemprop="reviewBody" class="reviews__slider--block">
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                   </div>
                 </li>
-                <li class="reviews__slider--item">
-                  <div class="reviews__slider--img">
-                    <img src="./img/jpg/people.jpg" alt="Фото клиента">
+                <li itemscope itemtype="http://schema.org/Review" class="reviews__slider--item">
+                  <div itemscope itemtype="http://schema.org/Person" class="reviews__people-box">
+                    <div class="reviews__slider--img">
+                      <img itemprop="image" src="./img/jpg/people.jpg" alt="Фото клиента">
+                    </div>
+                    <div class="reviews__slider--people">
+                      <p itemprop="author" class="reviews__slider--name">Фамилия Имя</p>
+                      <span itemprop="jobTitle" class="reviews__slider--job">Должность/специальность</span>
+                    </div>
                   </div>
-                  <div class="reviews__slider--people">
-                    <p class="reviews__slider--name">Фамилия Имя</p>
-                    <span class="reviews__slider--job">Должность/специальность</span>
-                  </div>
-                  <div class="reviews__slider--block">
+                  <div itemprop="reviewBody" class="reviews__slider--block">
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                   </div>
                 </li>
-                <li class="reviews__slider--item">
-                  <div class="reviews__slider--img">
-                    <img src="./img/jpg/people.jpg" alt="Фото клиента">
+                <li itemscope itemtype="http://schema.org/Review" class="reviews__slider--item">
+                  <div itemscope itemtype="http://schema.org/Person" class="reviews__people-box">
+                    <div class="reviews__slider--img">
+                      <img itemprop="image" src="./img/jpg/people.jpg" alt="Фото клиента">
+                    </div>
+                    <div class="reviews__slider--people">
+                      <p itemprop="author" class="reviews__slider--name">Фамилия Имя</p>
+                      <span itemprop="jobTitle" class="reviews__slider--job">Должность/специальность</span>
+                    </div>
                   </div>
-                  <div class="reviews__slider--people">
-                    <p class="reviews__slider--name">Фамилия Имя</p>
-                    <span class="reviews__slider--job">Должность/специальность</span>
-                  </div>
-                  <div class="reviews__slider--block">
+                  <div itemprop="reviewBody" class="reviews__slider--block">
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                   </div>
                 </li>
-                <li class="reviews__slider--item">
-                  <div class="reviews__slider--img">
-                    <img src="./img/jpg/people.jpg" alt="Фото клиента">
+                <li itemscope itemtype="http://schema.org/Review" class="reviews__slider--item">
+                  <div itemscope itemtype="http://schema.org/Person" class="reviews__people-box">
+                    <div class="reviews__slider--img">
+                      <img itemprop="image" src="./img/jpg/people.jpg" alt="Фото клиента">
+                    </div>
+                    <div class="reviews__slider--people">
+                      <p itemprop="author" class="reviews__slider--name">Фамилия Имя</p>
+                      <span itemprop="jobTitle" class="reviews__slider--job">Должность/специальность</span>
+                    </div>
                   </div>
-                  <div class="reviews__slider--people">
-                    <p class="reviews__slider--name">Фамилия Имя</p>
-                    <span class="reviews__slider--job">Должность/специальность</span>
-                  </div>
-                  <div class="reviews__slider--block">
+                  <div itemprop="reviewBody" class="reviews__slider--block">
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                   </div>
                 </li>
-                <li class="reviews__slider--item">
-                  <div class="reviews__slider--img">
-                    <img src="./img/jpg/people.jpg" alt="Фото клиента">
+                <li itemscope itemtype="http://schema.org/Review" class="reviews__slider--item">
+                  <div itemscope itemtype="http://schema.org/Person" class="reviews__people-box">
+                    <div class="reviews__slider--img">
+                      <img itemprop="image" src="./img/jpg/people.jpg" alt="Фото клиента">
+                    </div>
+                    <div class="reviews__slider--people">
+                      <p itemprop="author" class="reviews__slider--name">Фамилия Имя</p>
+                      <span itemprop="jobTitle" class="reviews__slider--job">Должность/специальность</span>
+                    </div>
                   </div>
-                  <div class="reviews__slider--people">
-                    <p class="reviews__slider--name">Фамилия Имя</p>
-                    <span class="reviews__slider--job">Должность/специальность</span>
-                  </div>
-                  <div class="reviews__slider--block">
+                  <div itemprop="reviewBody" class="reviews__slider--block">
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь даль взгляд использовало составитель бросил лучше страна буквенных над? Эта, родного что, собрал правилами которой оксмокс не, приставка рыбными послушавшись запятой всеми последний безопасную силуэт свою мир точках повстречался текстами? Снова своих наш текстов пунктуация агентство текстами оксмокс которой.</p>
                   </div>
@@ -675,9 +690,9 @@
             <h2 class="faq__title col-lg-6 offset-lg-3">часто задавемые вопросы</h2>
           </div>
           <div class="faq__accordion">
-            <div class="faq__accordion-box row">
+            <div itemscope itemtype="https://schema.org/Answer" class="faq__accordion-box row">
               <div data-tab='tab-1' class="faq__accordion-titlebox col-lg-12">
-                <h4 class="faq__accordion-title">Далеко-далеко за словесными горами в стране гласных и согласных.</h4>
+                <h4 itemprop="name" class="faq__accordion-title">Далеко-далеко за словесными горами в стране гласных и согласных.</h4>
                 <span class="faq__accordion-plus">
                   <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line x1="10.4999" y1="2.18557e-08" x2="10.4999" y2="19" stroke="#9747FF"/>
@@ -685,11 +700,11 @@
                   </svg>                    
                 </span>
               </div>
-              <p id='tab-1' class="faq__accordion-text col-lg-10">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Своего меня взгляд жаренные он вопроса всемогущая послушавшись ручеек пор?</p>
+              <p itemprop="text" id='tab-1' class="faq__accordion-text col-lg-10">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Своего меня взгляд жаренные он вопроса всемогущая послушавшись ручеек пор?</p>
             </div>
-            <div class="faq__accordion-box row">
+            <div itemscope itemtype="https://schema.org/Answer" class="faq__accordion-box row">
               <div data-tab='tab-2' class="faq__accordion-titlebox col-lg-12">
-                <h4 class="faq__accordion-title">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Рыбными точках злых даже он?</h4>
+                <h4 itemprop="name" class="faq__accordion-title">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Рыбными точках злых даже он?</h4>
                 <span class="faq__accordion-plus">
                   <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line x1="10.4999" y1="2.18557e-08" x2="10.4999" y2="19" stroke="#9747FF"/>
@@ -697,11 +712,11 @@
                   </svg>    
                 </span>
               </div>
-              <p id='tab-2' class="faq__accordion-text col-lg-10">Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Грамматики, заманивший пустился. Раз запятых пустился алфавит дал взобравшись мир коварный повстречался первую свое ему. Что строчка своих безорфографичный, мир образ однажды запятых власти злых.</p>
+              <p itemprop="text" id='tab-2' class="faq__accordion-text col-lg-10">Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Грамматики, заманивший пустился. Раз запятых пустился алфавит дал взобравшись мир коварный повстречался первую свое ему. Что строчка своих безорфографичный, мир образ однажды запятых власти злых.</p>
             </div>
-            <div class="faq__accordion-box row">
+            <div itemscope itemtype="https://schema.org/Answer" class="faq__accordion-box row">
               <div data-tab='tab-3' class="faq__accordion-titlebox col-lg-12">
-                <h4 class="faq__accordion-title">Далеко-далеко, за словесными.</h4>
+                <h4 itemprop="name" class="faq__accordion-title">Далеко-далеко, за словесными.</h4>
                 <span class="faq__accordion-plus">
                   <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line x1="10.4999" y1="2.18557e-08" x2="10.4999" y2="19" stroke="#9747FF"/>
@@ -709,24 +724,24 @@
                   </svg>    
                 </span>
               </div>
-              <p id='tab-3' class="faq__accordion-text col-lg-10">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+              <p itemprop="text" id='tab-3' class="faq__accordion-text col-lg-10">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
             </div>
-            <div class="faq__accordion-box row">
+            <div itemscope itemtype="https://schema.org/Answer" class="faq__accordion-box row">
               <div data-tab='tab-4' class="faq__accordion-titlebox col-lg-12">
-                <h4 class="faq__accordion-title">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Даль, рекламных запятой имени ты это букв буквенных реторический рукописи.</h4>
+                <h4 itemprop="name" class="faq__accordion-title">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Даль, рекламных запятой имени ты это букв буквенных реторический рукописи.</h4>
                 <span class="faq__accordion-plus">
                   <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line x1="10.4999" y1="2.18557e-08" x2="10.4999" y2="19" stroke="#9747FF"/>
                     <line x1="0.499878" y1="9" x2="19.4999" y2="9" stroke="#9747FF"/>
-                  </svg>    
+                  </svg>     itemprop="text"
                 </span>
               </div>
-              <p id='tab-4' class="faq__accordion-text col-lg-10">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Даль, составитель? Путь парадигматическая собрал даже заглавных по всей семантика на берегу коварных, не пояс если буквенных послушавшись рыбными вдали раз ее маленький за взобравшись большого то повстречался! Ручеек инициал над города запятых предупреждал ipsum пунктуация текстов взгляд там, большого рыбными родного.</p>
+              <p itemprop="text" id='tab-4' class="faq__accordion-text col-lg-10">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Даль, составитель? Путь парадигматическая собрал даже заглавных по всей семантика на берегу коварных, не пояс если буквенных послушавшись рыбными вдали раз ее маленький за взобравшись большого то повстречался! Ручеек инициал над города запятых предупреждал ipsum пунктуация текстов взгляд там, большого рыбными родного.</p>
             </div>
           </div>
         </div>
       </section>
-      <!-- <section class="planner">
+      <!-- <section class="planner" id="planner">
         <div class="container">
           
         </div>
@@ -835,11 +850,11 @@
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container">
           <div class="contacts__record row">
             <div class="contacts__record--box col-lg-5 offset-lg-1">
-              <a href="#" class="contacts__record--link contacts__link">
+              <a href="#planner" class="contacts__record--link contacts__link">
                 записаться на консультацию
               </a>
               <div class="contacts__record--arrow contacts__arrow">
@@ -856,7 +871,7 @@
         <div class="container">
           <div class="contacts__social row">
             <div class="contacts__social--box col-lg-2 offset-lg-7">
-              <a href="#" class="contacts__social--link contacts__link">
+              <a target="_blank" href="https://t.me/SENSIBLYAUDACIOUSCIENCE" class="contacts__social--link contacts__link">
                 telegram
               </a>
               <div class="contacts__social--arrow contacts__arrow">
@@ -866,7 +881,7 @@
               </div>
             </div>
             <div class="contacts__social--box col-lg-2">
-              <a href="#" class="contacts__social--link contacts__link">
+              <a arget="_blank" href="#" class="contacts__social--link contacts__link">
                 Whats App
               </a>
               <div class="contacts__social--arrow contacts__arrow">
@@ -879,12 +894,17 @@
         </div>
       </section>
     </main>
+    <div class="cookies">
+      <p class="cookies_text">
+        Пользуясь этим сайтом, вы соглашаетесь с тем, что <a target="_blank" href="#" class="cookies_file">мы используем cookies</a>
+      </p>
+      <button class="cookies_accept">ok</button>
+    </div>
 
     <!-- scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js" integrity="sha512-lhK7xTsFM6DPXOtQQyPe+NmpoFEheKDHjM/5QzpFRiE1KySgtBfEzYz4XowvB+CAWcBLBGWinhh41uNaOtrSZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/imask"></script>
     <script type="text/javascript" src="./js/app_circle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="./js/jquery.js"></script>
@@ -894,9 +914,10 @@
     <script type="text/javascript" src="./js/counter_about_me.js"></script>
     <script type="text/javascript" src="./js/animation_about-me.js"></script>
     <script type="text/javascript" src="./js/select_country_city.js"></script>
-    <script type="text/javascript" src="./js/phone-mask.js"></script>
     <script type="text/javascript" src="./js/disabled_btn.js"></script>
     <script type="text/javascript" src="./js/accordion.js"></script>
     <script type="text/javascript" src="./js/reviews.js"></script>
+    <script type="text/javascript" src="./js/cookies.js"></script>
+    <script type="text/javascript" src="./js/burger.js"></script>
   </body>
 </html>

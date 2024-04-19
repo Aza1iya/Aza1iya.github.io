@@ -1,13 +1,13 @@
 // переменные цвета
 const blockColor = '232323';
 const shadowColor = 'b6b6b6';
-const blockSqColor = 'ececec';
+const blockSqColor = 'fcfcfc';
 const textLightColor = 'fff';
 const textDarkColor = '000';
 
 // при наведении на первый квадрат
 document.getElementById('first_box_count').addEventListener('mouseover', function() {
-  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-lg-3');
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
   var infoBox = document.getElementById('first_box_info');
   var countCard = document.getElementById('first_box_count').querySelector('.card');
   
@@ -26,7 +26,7 @@ document.getElementById('first_box_count').addEventListener('mouseover', functio
 });
 
 document.getElementById('first_box_count').addEventListener('mouseout', function() {
-  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-lg-3');
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
   var infoBox = document.getElementById('first_box_info');
   var countCard = document.getElementById('first_box_count').querySelector('.card');
 
@@ -45,7 +45,7 @@ document.getElementById('first_box_count').addEventListener('mouseout', function
 
 // при наведении на второй квадрат
 document.getElementById('second_box_count').addEventListener('mouseover', function() {
-  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-lg-3');
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
   var infoBox = document.getElementById('second_box_info');
   var countBox = document.getElementById('second_box_count');
   var countCard = document.getElementById('second_box_count').querySelector('.card');
@@ -68,7 +68,7 @@ document.getElementById('second_box_count').addEventListener('mouseover', functi
 });
 
 document.getElementById('second_box_count').addEventListener('mouseout', function() {
-  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-lg-3');
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
   var infoBox = document.getElementById('second_box_info');
   var countBox = document.getElementById('second_box_count');
   var countCard = document.getElementById('second_box_count').querySelector('.card');
@@ -91,7 +91,7 @@ document.getElementById('second_box_count').addEventListener('mouseout', functio
 
 // при наведении на третий квадрат
 document.getElementById('third_box_count').addEventListener('mouseover', function() {
-  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-lg-3');
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
   var infoBox = document.getElementById('third_box_info');
   var countBox = document.getElementById('third_box_count');
   var countCard = document.getElementById('third_box_count').querySelector('.card');
@@ -114,7 +114,7 @@ document.getElementById('third_box_count').addEventListener('mouseover', functio
 });
 
 document.getElementById('third_box_count').addEventListener('mouseout', function() {
-  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-lg-3');
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
   var infoBox = document.getElementById('third_box_info');
   var countBox = document.getElementById('third_box_count');
   var countCard = document.getElementById('third_box_count').querySelector('.card');
@@ -137,7 +137,7 @@ document.getElementById('third_box_count').addEventListener('mouseout', function
 
 // при наведении на четвертый квадрат
 document.getElementById('fourth_box_count').addEventListener('mouseover', function() {
-  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-lg-3');
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
   var infoBox = document.getElementById('fourth_box_info');
   var countBox = document.getElementById('fourth_box_count');
   var countCard = document.getElementById('fourth_box_count').querySelector('.card');
@@ -160,7 +160,7 @@ document.getElementById('fourth_box_count').addEventListener('mouseover', functi
 });
 
 document.getElementById('fourth_box_count').addEventListener('mouseout', function() {
-  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-lg-3');
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
   var infoBox = document.getElementById('fourth_box_info');
   var countBox = document.getElementById('fourth_box_count');
   var countCard = document.getElementById('fourth_box_count').querySelector('.card');
