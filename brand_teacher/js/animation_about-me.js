@@ -1,73 +1,181 @@
-// Переменные цветов
-const colors = {
-  block: '232323',
-  shadow: 'b6b6b6',
-  blockSq: 'fcfcfc',
-  textLight: 'fff',
-  textDark: '000'
-};
+// переменные цвета
+const blockColor = '232323';
+const shadowColor = 'b6b6b6';
+const blockSqColor = 'fcfcfc';
+const textLightColor = 'fff';
+const textDarkColor = '000';
 
-// Переменная для хранения начального положения countBox
-let initialTransformPosition = {};
-
-// Функция для обработки наведения
-function handleMouseOver(countElementId, infoBoxId, countBoxId, transformValue) {
-  const boxes = document.querySelectorAll('.about-me__item.col-md-3');
-  const infoBox = document.getElementById(infoBoxId);
-  const countCard = document.getElementById(countElementId).querySelector('.card');
-  const countBox = document.getElementById(countBoxId);
-
-  // Сохраняем начальное положение countBox
-  initialTransformPosition[countBoxId] = countBox.style.transform;
-
-  // Изменение стилей квадрата
-  countCard.style.backgroundColor = `#${colors.block}`;
+// при наведении на первый квадрат
+document.getElementById('first_box_count').addEventListener('mouseover', function() {
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
+  var infoBox = document.getElementById('first_box_info');
+  var countCard = document.getElementById('first_box_count').querySelector('.card');
+  
+  // изменение стилей квадрата
+  countCard.style.backgroundColor = `#${blockColor}`;
   countCard.style.boxShadow = '0 0 150px 0 rgba(91, 43, 153, 0.59)';
-  countCard.style.color = `#${colors.textLight}`;
+  countCard.style.color = `#${textLightColor}`;
 
-  boxes.forEach(box => {
-    if (box.id!== countBoxId) {
+  boxes.forEach(function(box) {
+    if (box.id !== 'first_box_count') {
       box.classList.add('hidden');
     }
   });
 
   infoBox.classList.add('visible');
+});
 
-  // Изменение положения countBox
-  countBox.style.transform = `translateX(${transformValue})`;
-}
+document.getElementById('first_box_count').addEventListener('mouseout', function() {
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
+  var infoBox = document.getElementById('first_box_info');
+  var countCard = document.getElementById('first_box_count').querySelector('.card');
 
-// Функция для обработки ухода курсора
-function handleMouseOut(countElementId, infoBoxId, countBoxId) {
-  const boxes = document.querySelectorAll('.about-me__item.col-md-3');
-  const infoBox = document.getElementById(infoBoxId);
-  const countCard = document.getElementById(countElementId).querySelector('.card');
-  const countBox = document.getElementById(countBoxId);
+  // изменение стилей квадрата
+  countCard.style.backgroundColor = `#${blockSqColor}`;
+  countCard.style.boxShadow = `0 4px 20px 0 #${shadowColor}`;
+  countCard.style.color = `#${textDarkColor}`;
 
-  // Восстанавливаем начальное положение countBox
-  countBox.style.transform = initialTransformPosition[countBoxId];
-
-  // Изменение стилей квадрата
-  countCard.style.backgroundColor = `#${colors.blockSq}`;
-  countCard.style.boxShadow = `0 4px 20px 0 #${colors.shadow}`;
-  countCard.style.color = `#${colors.textDark}`;
-
-  boxes.forEach(box => {
+  boxes.forEach(function(box) {
     box.classList.remove('hidden');
   });
 
   infoBox.classList.remove('visible');
-}
+});
 
-// Применение функций к конкретным элементам
-document.getElementById('first_box_count').addEventListener('mouseover', () => handleMouseOver('first_box_count', 'first_box_info', 'first_box_count', '0%'));
-document.getElementById('first_box_count').addEventListener('mouseout', () => handleMouseOut('first_box_count', 'first_box_info', 'first_box_count'));
 
-document.getElementById('second_box_count').addEventListener('mouseover', () => handleMouseOver('second_box_count', 'second_box_info', 'second_box_count', '-100%'));
-document.getElementById('second_box_count').addEventListener('mouseout', () => handleMouseOut('second_box_count', 'second_box_info', 'second_box_count'));
+// при наведении на второй квадрат
+document.getElementById('second_box_count').addEventListener('mouseover', function() {
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
+  var infoBox = document.getElementById('second_box_info');
+  var countBox = document.getElementById('second_box_count');
+  var countCard = document.getElementById('second_box_count').querySelector('.card');
 
-document.getElementById('third_box_count').addEventListener('mouseover', () => handleMouseOver('third_box_count', 'third_box_info', 'third_box_count', '-200%'));
-document.getElementById('third_box_count').addEventListener('mouseout', () => handleMouseOut('third_box_count', 'third_box_info', 'third_box_count'));
+  // изменение положения box'а
+  countBox.style.transform = 'translateX(-100%)';
 
-document.getElementById('fourth_box_count').addEventListener('mouseover', () => handleMouseOver('fourth_box_count', 'fourth_box_info', 'fourth_box_count', '-300%'));
-document.getElementById('fourth_box_count').addEventListener('mouseout', () => handleMouseOut('fourth_box_count', 'fourth_box_info', 'fourth_box_count'));
+  // изменение стилей квадрата
+  countCard.style.backgroundColor = `#${blockColor}`;
+  countCard.style.boxShadow = '0 0 150px 0 rgba(91, 43, 153, 0.59)';
+  countCard.style.color = `#${textLightColor}`;
+
+  boxes.forEach(function(box) {
+    if (box.id !== 'second_box_count') {
+      box.classList.add('hidden');
+    }
+  });
+
+  infoBox.classList.add('visible');
+});
+
+document.getElementById('second_box_count').addEventListener('mouseout', function() {
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
+  var infoBox = document.getElementById('second_box_info');
+  var countBox = document.getElementById('second_box_count');
+  var countCard = document.getElementById('second_box_count').querySelector('.card');
+
+  // изменение положения box'а
+  countBox.style.transform = 'translateX(0%)';
+
+  // изменение стилей квадрата 
+  countCard.style.backgroundColor = `#${blockSqColor}`;
+  countCard.style.boxShadow = `0 4px 20px 0 #${shadowColor}`;
+  countCard.style.color = `#${textDarkColor}`;
+
+  boxes.forEach(function(box) {
+    box.classList.remove('hidden');
+  });
+
+  infoBox.classList.remove('visible');
+});
+
+
+// при наведении на третий квадрат
+document.getElementById('third_box_count').addEventListener('mouseover', function() {
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
+  var infoBox = document.getElementById('third_box_info');
+  var countBox = document.getElementById('third_box_count');
+  var countCard = document.getElementById('third_box_count').querySelector('.card');
+
+  // изменение положения box'а
+  countBox.style.transform = 'translateX(-200%)';
+
+  // изменение стилей квадрата 
+  countCard.style.backgroundColor = `#${blockColor}`;
+  countCard.style.boxShadow = '0 0 150px 0 rgba(91, 43, 153, 0.59)';
+  countCard.style.color = `#${textLightColor}`;
+
+  boxes.forEach(function(box) {
+    if (box.id !== 'third_box_count') {
+      box.classList.add('hidden');
+    }
+  });
+
+  infoBox.classList.add('visible');
+});
+
+document.getElementById('third_box_count').addEventListener('mouseout', function() {
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
+  var infoBox = document.getElementById('third_box_info');
+  var countBox = document.getElementById('third_box_count');
+  var countCard = document.getElementById('third_box_count').querySelector('.card');
+
+  // изменение положения box'а
+  countBox.style.transform = 'translateX(0%)';
+
+  // изменение стилей квадрата 
+  countCard.style.backgroundColor = `#${blockSqColor}`;
+  countCard.style.boxShadow = `0 4px 20px 0 #${shadowColor}`;
+  countCard.style.color = `#${textDarkColor}`;
+
+  boxes.forEach(function(box) {
+    box.classList.remove('hidden');
+  });
+
+  infoBox.classList.remove('visible');
+});
+
+
+// при наведении на четвертый квадрат
+document.getElementById('fourth_box_count').addEventListener('mouseover', function() {
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
+  var infoBox = document.getElementById('fourth_box_info');
+  var countBox = document.getElementById('fourth_box_count');
+  var countCard = document.getElementById('fourth_box_count').querySelector('.card');
+
+  // изменение положения box'а
+  countBox.style.transform = 'translateX(-300%)';
+
+  // изменение стилей квадрата 
+  countCard.style.backgroundColor = `#${blockColor}`;
+  countCard.style.boxShadow = '0 0 150px 0 rgba(91, 43, 153, 0.59)';
+  countCard.style.color = `#${textLightColor}`;
+
+  boxes.forEach(function(box) {
+    if (box.id !== 'fourth_box_count') {
+      box.classList.add('hidden');
+    }
+  });
+
+  infoBox.classList.add('visible');
+});
+
+document.getElementById('fourth_box_count').addEventListener('mouseout', function() {
+  var boxes = document.querySelector('.about-me__list').querySelectorAll('.col-md-3');
+  var infoBox = document.getElementById('fourth_box_info');
+  var countBox = document.getElementById('fourth_box_count');
+  var countCard = document.getElementById('fourth_box_count').querySelector('.card');
+
+  // изменение положения box'а
+  countBox.style.transform = 'translateX(0%)';
+
+  // изменение стилей квадрата 
+  countCard.style.backgroundColor = `#${blockSqColor}`;
+  countCard.style.boxShadow = `0 4px 20px 0 #${shadowColor}`;
+  countCard.style.color = `#${textDarkColor}`;
+
+  boxes.forEach(function(box) {
+    box.classList.remove('hidden');
+  });
+
+  infoBox.classList.remove('visible');
+});
